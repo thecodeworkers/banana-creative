@@ -1,0 +1,51 @@
+@import '../../../public/styles/index.scss';
+
+._navBar {
+  @include navBarPaddingTop;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-bottom: 2vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .5s linear;
+	z-index: 999;
+
+  &._light {
+		background-color: $white;
+
+    ._navBarLogo,
+    ._navBarToggle { fill: $littleBlack; }
+  }
+
+  &._dark {
+    background-color: $littleBlack;
+
+    ._navBarLogo,
+    ._navBarToggle { fill: $white; }
+  }
+
+  ._navBarLogo { width: 9%; }
+
+  ._navBarToggleWrapper {
+    padding-top: 1vh;
+		width: 30px;
+		height: 30px;
+	}
+}
+
+._toggleChild {
+		height: 80%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+}
+
+._logoParent {
+	width: 9rem;
+}

@@ -1,0 +1,48 @@
+@import '../../../public/styles/index.scss';
+
+._loading {
+	background-color: $pureBlack;
+	width: 100%;
+	height: 100vh;
+	z-index: 1099;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+._lottie {
+	width: 20%;
+}
+
+._hidden {
+	background-color: $pureBlack;
+	width: 100%;
+	height: 100vh;
+	z-index: 1099;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: hidden 1s forwards;
+}
+
+
+@keyframes hidden {
+	from {opacity: 1}
+	to {opacity: 0; visibility: hidden;}
+}
+
+
+._showLoader {
+	width: 100%;
+}
+
+._hiddenLoader {
+	visibility: hidden;
+  z-index: -1;
+}
+
+._invisible {
+	visibility: hidden;
+}
