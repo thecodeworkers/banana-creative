@@ -1,0 +1,271 @@
+@import '../../../public/styles/index.scss';
+
+$textHeight: 0px;
+// :root {
+// 	--bottomPosition: 50%;
+// 	--bottomMoreInfoPosition: 15%;
+// }
+
+$bottomPosition: 50%;
+$bottomMoreInfoPosition: 15%;
+
+@mixin background {
+	background-color: #ffffff;
+}
+
+@mixin blueText {
+	color: $blue;
+  font-family: $helveticaBold;
+  line-height: 1.2;
+	opacity: 1;
+	font-weight: 900;
+}
+
+@mixin printHeight($prefix, $num) {
+	@for $i from 1 through $num {
+		#{$prefix}-#{$i} {
+			top: space();
+		}
+	}
+}
+
+@function space() {
+	$textHeight: $textHeight + 40px !global;
+	$top: $textHeight;
+
+	@return $top;
+}
+
+._principalContainer {
+  padding: 10vh 2.5% 5vh 2.5%;
+	height: 100vh;
+	@include background();
+}
+
+._container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+	flex-wrap: wrap;
+	@include background();
+}
+
+._concept {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 40%;
+	@include background();
+}
+
+._intermediate {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1.4%;
+	z-index: 2;
+	position: absolute;
+	bottom: $bottomPosition;
+	width: 95%;
+
+  ._target {
+    font-family: $helvetica;
+		width: 50%;
+		@include background();
+    font-size: 1rem;
+  }
+
+  ._targetRightContainer {
+    display: flex;
+    justify-content: space-between;
+		width: 50%;
+		@include background();
+
+    ._targetRight {
+			font-family: $helvetica;
+			color: $gray;
+			@include background();
+
+
+			&:first-child {
+				padding-left: 15%;
+			}
+		}
+  }
+
+  ._separator {
+    width: 100%;
+    border: 0;
+    background-color: $gray;
+    height: 3px;
+  }
+}
+
+._contact {
+  width: 50%;
+  display: flex;
+	align-items: flex-end;
+
+	@include background();
+	z-index: 1;
+
+  ._contactText {
+    font-family: $helvetica;
+		font-size: 14px;
+		margin-right: 15%;
+		@include background();
+
+
+		&::after {
+			display: block;
+			content: '';
+			border-bottom: solid 1px $pureBlack;
+			transform: scaleX(0);
+			transition: transform 250ms ease-in-out;
+		}
+
+		&:hover::after {
+			transform: scaleX(1);
+		}
+	}
+
+	._moreInfo {
+		opacity: 0;
+		position: absolute;
+		bottom: $bottomMoreInfoPosition;
+		color: $gray;
+		width: 30%;
+		@include background();
+		font-family: $helvetica;
+	}
+}
+
+._logoParentWelcome {
+	width: 40%;
+}
+
+._description {
+	@include background();
+  width: 50%;
+  height: 50%;
+	font-family: $helvetica;
+	font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+	color: $pureBlack;
+
+	._descriptionText {
+		padding: 20% 0 10% 15%;
+		@include background();
+	}
+}
+
+._whiteBodyText{
+	color: $pureBlack;
+	font-family: $helveticaBold;
+	font-weight: bold;
+  line-height: 1.2;
+  opacity: 1;
+	font-size: 5rem;
+	@include background();
+}
+
+._list {
+	list-style: none;
+	position: absolute;
+	top: 37%;
+	@include printHeight('#text', 6);
+	@include background();
+
+	._smallBodyText {
+		@include blueText;
+		opacity: 0;
+		font-size: 1.75rem;
+		position: absolute;
+		top: 0;
+
+		z-index: 2;
+	}
+}
+
+._arrow {
+	position: absolute;
+	bottom: 5%;
+	right: 50%;
+	z-index: 2;
+}
+
+._languageButton {
+	font-family: $helvetica;
+	font-size: 12px;
+	background-color: $pureBlack;
+	color: $white;
+	border: none;
+	width: 70px;
+	margin-right: 50px;
+	padding: 5px 0 3px 0;
+	border-radius: 2px;
+	cursor: none;
+	font-weight: 200;
+}
+
+@include responsive(xxl) {
+
+  ._moreInfo{
+		font-size: 0.8rem !important;
+		bottom: 7% !important;
+	}
+
+	._target{
+		font-size: 0.75rem !important;
+	}
+
+ 	._list{
+		top: 32% !important;
+	}
+
+	._smallBodyText{
+		font-size:1.20rem !important;
+	}
+
+	._descriptionText{
+		font-size: 1.1rem !important
+	}
+
+	._whiteBodyText{
+		font-size: 2.5rem !important;
+	}
+}
+
+
+@include responsive(xl) {
+
+  ._moreInfo{
+		font-size: 0.8rem !important;
+		bottom: 5% !important;
+	}
+
+	._target{
+		font-size: 0.75rem !important;
+	}
+
+	._list{
+		top: 26% !important;
+	}
+
+	 ._smallBodyText{
+		font-size:1.10rem !important;
+	}
+	._descriptionText{
+		font-size: 0.95rem !important
+	}
+	._whiteBodyText{
+		font-size: 2.2rem !important;
+	}
+
+}
+
+
+
+
+
