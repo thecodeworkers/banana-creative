@@ -165,9 +165,10 @@ $bottomMoreInfoPosition: 15%;
 }
 
 ._list {
+	padding: 0;
 	list-style: none;
 	position: absolute;
-	top: 40%;
+	top: 37%;
 	@include printHeight('#text', 6);
 	@include background();
 	visibility: hidden;

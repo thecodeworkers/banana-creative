@@ -144,8 +144,8 @@ const inlineStyles = () => (
     font-family: $helveticaBold;
     line-height: 1.2;
     font-weight: 900;
-    color: ${blue}
-    padding-bottom: 4rem;
+    color: ${blue};
+    padding-bottom: 0.625rem;
 	}
   
 `}</style>
