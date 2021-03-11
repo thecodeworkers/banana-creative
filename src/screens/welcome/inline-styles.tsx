@@ -2,13 +2,16 @@ const gray = '#929497';
 const pureBlack = '#000000';
 const blue = '#0853DC';
 
+const helvetica = 'HelveticaNeue';
+const helveticaBold = "HeltevicaNeueBold";
+
 const inlineStyles = () => (
   <style jsx>{`
   ._description {
     background-color: #ffffff;
     width: 50%;
     height: 50%;
-    font-family: $helvetica;
+    font-family: ${helvetica};
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -21,7 +24,7 @@ const inlineStyles = () => (
   }
 
   ._target {
-    font-family: $helvetica;
+    font-family: ${helvetica};
     width: 50%;
     background-color: #ffffff;
     font-size: 1rem;
@@ -35,7 +38,7 @@ const inlineStyles = () => (
   }
 
   ._targetRight {
-    font-family: $helvetica;
+    font-family: ${helvetica};
     color: $gray;
     background-color: #ffffff;
   }
@@ -51,7 +54,7 @@ const inlineStyles = () => (
   }
 
   ._contactText {
-    font-family: $helvetica;
+    font-family: ${helvetica};
     font-size: 14px;
     margin-right: 15%;
     background-color: #ffffff;
@@ -77,7 +80,7 @@ const inlineStyles = () => (
     color: ${gray};
     width: 30%;
     background-color: #ffffff;
-    font-family: $helvetica;
+    font-family: ${helvetica};
   }
 
   ._arrow {
@@ -89,7 +92,7 @@ const inlineStyles = () => (
   
   ._whiteBodyText{
     color: ${pureBlack};
-    font-family: $helveticaBold;
+    font-family: ${helveticaBold};
     font-weight: bold;
     line-height: 1.2;
     opacity: 1;
@@ -124,7 +127,7 @@ const inlineStyles = () => (
   }
 
   ._languageButton {
-    font-family: $helvetica;
+    font-family: ${helvetica};
     font-size: 12px;
     background-color: ${pureBlack};
     color: #ffffff;
@@ -141,7 +144,7 @@ const inlineStyles = () => (
 		opacity: 0;
 		font-size: 1.75rem;
 		z-index: 2;
-    font-family: $helveticaBold;
+    font-family: ${helveticaBold};
     line-height: 1.2;
     font-weight: 900;
     color: ${blue};

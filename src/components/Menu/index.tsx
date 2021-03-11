@@ -11,9 +11,7 @@ const Menu: React.FC<menuProps> = (props) => {
 
     const { menu, action, reference } = props;
     
-
     useEffect(() => {
-
         if (menu.opened) gsapMenuStart();
     }, [menu]);
 
