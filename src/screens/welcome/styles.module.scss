@@ -1,11 +1,6 @@
 @import '../../../public/styles/index.scss';
 
 $textHeight: 0px;
-// :root {
-// 	--bottomPosition: 50%;
-// 	--bottomMoreInfoPosition: 15%;
-// }
-
 $bottomPosition: 50%;
 $bottomMoreInfoPosition: 15%;
 
@@ -115,7 +110,6 @@ $bottomMoreInfoPosition: 15%;
 		margin-right: 15%;
 		@include background();
 
-
 		&::after {
 			display: block;
 			content: '';
@@ -173,19 +167,19 @@ $bottomMoreInfoPosition: 15%;
 ._list {
 	list-style: none;
 	position: absolute;
-	top: 37%;
+	top: 40%;
 	@include printHeight('#text', 6);
 	@include background();
+	visibility: hidden;
+	// ._smallBodyText {
+	// 	@include blueText;
+	// 	opacity: 0;
+	// 	font-size: 1.75rem;
+	// 	position: absolute;
+	// 	top: 0;
 
-	._smallBodyText {
-		@include blueText;
-		opacity: 0;
-		font-size: 1.75rem;
-		position: absolute;
-		top: 0;
-
-		z-index: 2;
-	}
+	// 	z-index: 2;
+	// }
 }
 
 ._arrow {
