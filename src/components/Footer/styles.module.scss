@@ -1,0 +1,62 @@
+@import '../../../public/styles/index.scss';
+
+._footerContainer{
+	background-color: #323031;
+ 	min-height: 200px;
+	color: white;
+	display: flex;
+	justify-content: center;
+}
+._footerContent{
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 45px;
+	margin-right: 45px;
+}
+
+._footerLogo{
+	width: 8%;
+	fill: $white;
+}
+
+._sectionsContainer{
+	display: flex;
+	justify-content: space-between;
+}
+
+._sectionLeftContainer{
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	align-items: flex-end;
+/* 	font-family: $helvetica; */
+	font-size: 1rem;
+}
+
+._sectionsRightContainer{
+	width: 50%;
+	text-align: right;
+	font-size: 0.75rem;
+  	font-weight: 400;
+ /*  font-family: $helvetica; */
+}
+
+._footerLine{
+	width: 100%;
+  	height: 1.5px;
+  	background-color: $white;
+ 	margin-top: 20px;
+ 	margin-bottom: 20px;
+	bottom: 20%;
+}
+
+._footerTextContainer{
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
+	font-size: 0.75rem;
+  	font-weight: 400;
+  /* font-family: $helvetica; */
+}
+
