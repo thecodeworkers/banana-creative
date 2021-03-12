@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { NavBar } from '../../components';
+import { NavBar, Menu } from '../../components';
 // import { Welcome, AllFeatured } from '../screens';
 import { bigCursor, smallCursor, whiteCursor, smallWhiteCursor } from '../../utils/cursor';
 import { Logo } from '../../assets/img';
@@ -50,8 +50,8 @@ const HomeScreen = () => {
 	return (
 		<div >
 			<NavBar colorChange={true} />
-			{/* <Menu reference={featured} />
-			<VerticalBreadcrumb /> */}
+			<Menu reference={featured} />
+			{/* <VerticalBreadcrumb /> */}
 			{/* <Welcome title={<Logo />} component={true} />
 			<div ref={featured}>
 				<AllFeatured />
