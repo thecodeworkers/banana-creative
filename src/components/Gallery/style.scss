@@ -1,0 +1,101 @@
+@import '../../../public//styles/index.scss';
+
+@mixin circle($color) {
+	width: 12px;
+	height: 12px;
+	background-color: $color;
+	border-radius: 50%;
+	margin: 0px 4px 0px 4px;
+}
+
+@mixin text($bold, $size) {
+	font-size: $size;
+	color: $gray;
+	@if ($bold) {
+		font-weight: $bold;
+	}
+}
+
+._generalGallery {
+	width: 90%;
+	margin: auto;
+	padding: 3% 0px 3% 0px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	background-color: $white;
+}
+
+._teamPhoto {
+	width: calc(33% - 15px);
+	height: 50vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-position: center center;
+	margin: 2% 0px 2% 0px;
+	transition: all 0.6s;
+	background-color: blue;
+	position: relative;
+}
+
+._teamDescription {
+	box-sizing: border-box;
+	padding:  2% 4% 2% 4%;
+	background-color: $opacityGray;
+	-webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+
+._teamList {
+	list-style: none;
+
+	& > li {
+		font-family: $helvetica;
+		color: #212121;
+	}
+}
+
+._teamName {
+	@include text(600, 0.9rem)
+}
+
+._teamPosition {
+	@include text('', 0.9rem)
+}
+._yellowCircle {
+	@include circle($yellow);
+}
+
+._redCircle {
+	@include circle($red);
+}
+
+._purpleCircle {
+	@include circle($purple);
+}
+
+._itemRow {
+	display: inline-flex;
+	@include text(600, 	1.15rem);
+}
+
+._circlesParent {
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+}
+
+@media (max-width: 992px) {
+	._teamPhoto {
+		width: calc(50% - 30px)
+	}
+}
+
+@media (max-width: 768px) {
+	._teamPhoto {
+		width: 100%;
+	}
+}

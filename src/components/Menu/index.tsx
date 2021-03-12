@@ -123,10 +123,11 @@ const Menu: React.FC<menuProps> = (props) => {
             color: #FFFFFF;
             opacity: 0;
             transform: translate(30px) rotate(-180deg);
+            font-family: helvetica
             }
 
             ._blackFooterLine {
-            width: 85%;
+            width: 0%;
             height: 1.5px;
             background-color: #FFFFFF;
             // display: block;
