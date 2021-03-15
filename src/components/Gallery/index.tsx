@@ -15,7 +15,7 @@ const Gallery = () => {
 				team.map((item, index) => {
 					return (
 						<div className={styles._teamPhoto}
-							style={{backgroundImage: `url(${require('../../../assets/images/team/teamphoto.png')})`}}
+							style={{backgroundImage: `url('images/team/teamphoto.png')`}}
 							onClick={() => imageChange(index)}
 							key={index}
 						>

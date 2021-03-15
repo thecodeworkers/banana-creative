@@ -1,13 +1,13 @@
-import het from '../../../public/images/team/portrait.jpg';
-import gatsby from '../../../assets/images/gatsby-astronaut.png';
+const img = 'images/team/teamphoto.png'
+const otherimage = 'images/team/teamphoto.png'
 
 export const teamData = [
 
 	{
 		name: 'Arianna Pérez',
 		position: 'Co-founder / CEO & Art Director',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -26,8 +26,8 @@ export const teamData = [
 	{
 		name: 'Andrea González',
 		position: 'Co-founder / CEO & Art Director',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -46,8 +46,8 @@ export const teamData = [
 	{
 		name: 'Samuel Surós',
 		position: 'Co-founder / Chief Animator',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -64,8 +64,8 @@ export const teamData = [
 	{
 		name: 'Dana Chocrón ',
 		position: 'COO (Chief Operating Officer)',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -83,8 +83,8 @@ export const teamData = [
 	{
 		name: 'Isabel El Zelah ',
 		position: 'CMO(Chief Marketing Officer)',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -103,8 +103,8 @@ export const teamData = [
 	{
 		name: 'Alejandro Olivares',
 		position: ' Art Director',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -121,8 +121,8 @@ export const teamData = [
 	{
 		name: 'Guillermo Mancera',
 		position: 'Lead UX',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -139,8 +139,8 @@ export const teamData = [
 	{
 		name: 'Stefanny Montilla',
 		position: 'Lead UI Designer',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -157,8 +157,8 @@ export const teamData = [
 	{
 		name: 'Luis Noguera',
 		position: 'Lead Designer',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -175,8 +175,8 @@ export const teamData = [
 	{
 		name: 'Darianna Medina',
 		position: 'Designer & Illustrator',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -193,8 +193,8 @@ export const teamData = [
 	{
 		name: 'Samuel Hernández',
 		position: 'Animator',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -211,8 +211,8 @@ export const teamData = [
 	{
 		name: 'Lay Salazar',
 		position: 'Animator',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -229,8 +229,8 @@ export const teamData = [
 	{
 		name: '	Maria Eliceth Valera',
 		position: 'Lead Social Media Designer',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -247,8 +247,8 @@ export const teamData = [
 	{
 		name: 'Antonella Gollo',
 		position: 'Content Creator',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -265,8 +265,8 @@ export const teamData = [
 	{
 		name: 'Nehama Ramos',
 		position: 'Content Manager',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -283,8 +283,8 @@ export const teamData = [
 	{
 		name: 'Paola Sanz',
 		position: 'PR & Communications',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -301,8 +301,8 @@ export const teamData = [
 	{
 		name: 'Joselin Borges',
 		position: 'Community Manager',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -319,8 +319,8 @@ export const teamData = [
 	{
 		name: 'Jose González',
 		position: 'Product Photographer',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
@@ -337,8 +337,8 @@ export const teamData = [
 	{
 		name: 'Ariana Reyes',
 		position: 'Operations Assistent',
-		img: het,
-		otherimage: gatsby,
+		img,
+		otherimage,
 		activeImage: false,
 		skills: [
 			{
