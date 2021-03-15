@@ -7,18 +7,19 @@ import { gsap } from 'gsap';
 
 
 const VerticalBreadcrumb: React.FC<verticalBreadcrumbProps> = ({ breadcrumb }) => {
+	console.log(breadcrumb);
 
-	// const {text, color } = breadcrumb;
+	const { text, color } = breadcrumb;
 	const tl = gsap.timeline();
 
-	// useEffect(() => {
-	// 	tl.play();
-	// 	tl.to('._breadCrumbtext', 1, { color });
-	// }, [breadcrumb])
+	useEffect(() => {
+		tl.play();
+		tl.to('._breadCrumbtext', 1, { color });
+	}, [breadcrumb])
 
 	return (
 		<div className={styles._breadCrumbContainer}>
-			<p className={styles._breadCrumbtext}>{'text'}</p>
+			<p className={styles._breadCrumbtext}>{text}</p>
 		</div>
 	)
 }
