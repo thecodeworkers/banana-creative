@@ -6,11 +6,13 @@ import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 import { unfoldMenu, changeToggle } from '../../store/actions';
 import menuProps from './interface';
+import { useRouter } from 'next/router';
 
 const Menu: React.FC<menuProps> = (props) => {
 
     const { menu, action, reference } = props;
-    
+    const router = useRouter();
+
     useEffect(() => {
         if (menu.opened) gsapMenuStart();
     }, [menu]);
@@ -22,10 +24,12 @@ const Menu: React.FC<menuProps> = (props) => {
     }
 
     const navigation = (route) => {
-        const path = window.location.href;
-        const splitPath = path.split('/');
-        if (`/${splitPath[3]}` != route) closeMenu();
+        // const path = window.location.href;
+        // const splitPath = path.split('/');
+        // if (`/${splitPath[3]}` != route) 
+        closeMenu();
         action.changeToggle(3);
+        router.push('/about-us');
     }
 
     const scrolling = (ref, path) => {

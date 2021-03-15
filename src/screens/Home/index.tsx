@@ -53,7 +53,7 @@ const HomeScreen = () => {
 			<Menu reference={featured} />
 			<VerticalBreadcrumb />
 			<Welcome title={<Logo />} component={true} />
-				{/* <AllFeatured /> */}
+			{/* <AllFeatured /> */}
 		</div>
 	)
 }
