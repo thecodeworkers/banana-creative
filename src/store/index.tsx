@@ -1,5 +1,4 @@
-import React from 'react';
-import { createStore, compose } from 'redux';
+import { createStore } from 'redux';
 import { createWrapper } from 'next-redux-wrapper';
 import reducers from './reducers';
 
