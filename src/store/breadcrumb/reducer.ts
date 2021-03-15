@@ -1,4 +1,4 @@
-import { BREADCRUMB_CHANGE } from "./action-types";
+import { BREADCRUMB_CHANGE } from './action-types';
 
 const initialState = {
 	color: '#000000',

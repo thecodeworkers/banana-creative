@@ -5,9 +5,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { gsap } from 'gsap';
 
-
 const VerticalBreadcrumb: React.FC<verticalBreadcrumbProps> = ({ breadcrumb }) => {
-	console.log(breadcrumb);
 
 	const { text, color } = breadcrumb;
 	const tl = gsap.timeline();
