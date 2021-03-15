@@ -51,11 +51,10 @@ const HomeScreen = () => {
 		<div >
 			<NavBar colorChange={true} />
 			<Menu reference={featured} />
-			<VerticalBreadcrumb />
-			{/* <Welcome title={<Logo />} component={true} />
-			<div ref={featured}>
+			 <VerticalBreadcrumb />
+			<Welcome title={<Logo />} component={true} />
 				<AllFeatured />
-			</div> */}
+			</div>  */}
 		</div>
 	)
 }

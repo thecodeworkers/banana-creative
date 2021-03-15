@@ -5,10 +5,10 @@ i18next.init({
     lng: 'en',
     resources: {
 			es: {
-				translations: require('../../assets/lang/es.json')
+				translations: require('../../public/lang/es.json')
 			},
 			en: {
-				translations: require('../../assets/lang/en.json')
+				translations: require('../../public/lang/en.json')
 			}
     },
     ns: ['translations'],
