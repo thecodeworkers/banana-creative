@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavBar, Menu, VerticalBreadcrumb } from '../../components';
-// import { Welcome, AllFeatured } from '../screens';
+import { Welcome } from '../../screens';
 import { bigCursor, smallCursor, whiteCursor, smallWhiteCursor } from '../../utils/cursor';
 import { Logo } from '../../assets/img';
 import { rgb2hex } from '../../utils/hexadecimal';
@@ -51,10 +51,9 @@ const HomeScreen = () => {
 		<div >
 			<NavBar colorChange={true} />
 			<Menu reference={featured} />
-			 <VerticalBreadcrumb />
+			<VerticalBreadcrumb />
 			<Welcome title={<Logo />} component={true} />
-				<AllFeatured />
-			</div>  */}
+				{/* <AllFeatured /> */}
 		</div>
 	)
 }
