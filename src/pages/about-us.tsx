@@ -7,7 +7,6 @@ const AboutUs = () => {
 		<>
 		<NavBar colorChange={false}/>
 		<Menu />
-		
 		<Welcome title='About us' component={false}/>
 		<Gallery />
 		{/* <Footer />  */}
