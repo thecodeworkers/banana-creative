@@ -1,6 +1,6 @@
 import React from 'react';
 import { Welcome } from '../screens';
-import { NavBar, Menu, Gallery } from '../components';
+import { NavBar, Menu, Gallery, Footer } from '../components';
 
 const AboutUs = () => {
 	return (
@@ -9,7 +9,7 @@ const AboutUs = () => {
 		<Menu />
 		<Welcome title='About us' component={false}/>
 		<Gallery />
-		{/* <Footer />  */}
+	 	<Footer />  
 		</>
 	)
 };
