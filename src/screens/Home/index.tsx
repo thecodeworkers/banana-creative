@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import { NavBar, Menu, VerticalBreadcrumb } from '../../components';
-import { Welcome } from '../../screens';
+import { Welcome, AllFeatured } from '../../screens';
 import { bigCursor, smallCursor, whiteCursor, smallWhiteCursor } from '../../utils/cursor';
 import { Logo } from '../../assets/img';
 import { rgb2hex } from '../../utils/hexadecimal';
@@ -53,7 +53,7 @@ const HomeScreen = () => {
 			<Menu reference={featured} />
 			<VerticalBreadcrumb />
 			<Welcome title={<Logo />} component={true} />
-			{/* <AllFeatured /> */}
+			<AllFeatured />
 		</div>
 	)
 }

@@ -1,0 +1,114 @@
+@import '../../../public/styles/index.scss';
+
+
+@mixin opacity {
+  opacity: 1;
+}
+
+@mixin opacity2 {
+  opacity: 0;
+}
+
+._main {
+  background-color: $littleBlack;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+._featuredContent {
+  width: 95%;
+  height: 100vh;
+  margin: 0% 2.5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10vh;
+	box-sizing: border-box;
+	background-color: $littleBlack;
+}
+
+._leftFeaturedContent {
+  width: 45%;
+}
+
+._rightFeaturedContent {
+  width: 55%;
+	position: relative;
+}
+
+._featuredTools {
+	position: absolute;
+	left: -3rem;
+
+	& p {
+		text-align: center;
+		color: $white;
+		font-family: $helvetica;
+	}
+}
+
+._toolsParent {
+	width: 2.2rem;
+	height: 2.2rem;
+	margin-top: 0.7rem;
+}
+
+._keywords {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.7rem;
+
+  & p {
+    font-family: $helvetica;
+    color: $white;
+  }
+}
+
+._caseOfStudy {
+	font-size: 1.1rem;
+	font-family: $helvetica;
+}
+
+
+._textDay, ._keywordText{
+	font-size: 0.9rem;
+	font-family: $helvetica;
+}
+
+._leftDescription {
+  width: 75%;
+  padding-left: 2.5%;
+}
+
+._loremText {
+  color: $white;
+  font-size: 1.2rem;
+	font-family: $helveticaBold;
+	font-weight: 600;
+}
+
+.test {
+  transform: rotate(-180deg);
+  writing-mode: vertical-lr;
+  right: -2.2rem;
+  bottom: 2.3rem;
+  position: absolute;
+
+  & p {
+    font-family: $helvetica;
+    color: $white;
+		font-weight: bold;
+
+  }
+}
+
+._text2, ._text3 {
+	opacity: 0;
+	font-family: $helvetica;
+}
+
+._imgParent {
+	padding-right: 2.5%;
+}

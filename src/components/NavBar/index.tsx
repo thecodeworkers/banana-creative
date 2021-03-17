@@ -14,7 +14,7 @@ const NavBar: React.FC<navBarProps> = (props) => {
 	const router = useRouter();
 
 	const { reference, action, toggle, theme, colorChange } = props;
-	const [ isDark, setIsDark ] = useState(false);
+	const [isDark, setIsDark] = useState(false);
 	// const timeline = gsap.timeline();
 
 	const openMenu = () => {
@@ -52,7 +52,7 @@ const NavBar: React.FC<navBarProps> = (props) => {
 	}
 
 	const navigateToHome = () => {
-		if(router.pathname != '/') router.push('/');
+		if (router.pathname != '/') router.push('/');
 		action.changeToggle(3);
 	};
 

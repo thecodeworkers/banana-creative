@@ -1,5 +1,5 @@
-// export { default as Featured} from './featured';
-export { default as Welcome } from './welcome';
-// export { default as FeaturedTwo } from './featuredTwo';
-// export { default as AllFeatured } from './allFeatured';
+export { default as Featured } from './Featured';
+export { default as Welcome } from './Welcome';
+export { default as FeaturedTwo } from './FeaturedTwo';
+export { default as AllFeatured } from './AllFeatured';
 export { default as HomeScreen } from './Home';
