@@ -15,8 +15,8 @@ const VerticalBreadcrumb: React.FC<verticalBreadcrumbProps> = ({ breadcrumb }) =
 
 	useEffect(() => {
 		tl.play();
-		tl.to('._breadCrumbtext', 1, { color:color });
-		
+		tl.to('._breadCrumbtext', 1, { color: color });
+
 	}, [breadcrumb])
 
 	return (

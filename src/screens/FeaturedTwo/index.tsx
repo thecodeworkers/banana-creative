@@ -26,11 +26,9 @@ const FeaturedTwo: FC<propsType> = ({ imageDescription, date, keywords, title, s
 	const helveticaBold = "HeltevicaNeueBold";
 	const white = '#FFFFFF'
 
-
 	useEffect(() => {
 		triggerAction();
 	}, []);
-
 
 	const inAnimation = (param) => {
 		let timeline = gsap.timeline();
@@ -50,7 +48,6 @@ const FeaturedTwo: FC<propsType> = ({ imageDescription, date, keywords, title, s
 	const enterSection = (tl: any) => {
 
 		inAnimation(false);
-
 		if (transition) {
 			action.setTheme(true);
 			tl.to(['._principal', '._featuredTwoChild'], { backgroundColor: '#2C292A' });
@@ -66,11 +63,8 @@ const FeaturedTwo: FC<propsType> = ({ imageDescription, date, keywords, title, s
 	const outBackSection = (tl: any) => {
 
 		inAnimation(true);
-		console.log('hola');
-		
 		if (transition) {
 			action.setTheme(false);
-			console.log('adios');
 
 			tl.to(['._principal', '._featuredTwoChild'], { backgroundColor: '#FFFFFF' });
 

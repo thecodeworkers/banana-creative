@@ -5,11 +5,11 @@ import { NavBar, Menu, Gallery, Footer } from '../components';
 const AboutUs = () => {
 	return (
 		<>
-		<NavBar colorChange={false}/>
-		<Menu />
-		<Welcome title='About us' component={false}/>
-		<Gallery />
-	 	<Footer />  
+			<NavBar colorChange={false} />
+			<Menu />
+			<Welcome title='About us' component={false} />
+			<Gallery />
+			<Footer />
 		</>
 	)
 };

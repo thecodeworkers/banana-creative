@@ -11,7 +11,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'All creative fields',
+				title: 'All creative fields',
 			},
 			{
 				circles: [
@@ -31,7 +31,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'All creative fields',
+				title: 'All creative fields',
 			},
 			{
 				circles: [
@@ -51,7 +51,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Mograph',
+				title: 'Mograph',
 			},
 			{
 				circles: [
@@ -69,7 +69,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'All creative fields',
+				title: 'All creative fields',
 			},
 			{
 				circles: [
@@ -88,7 +88,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'All creative fields',
+				title: 'All creative fields',
 			},
 			{
 				circles: [
@@ -108,7 +108,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Brand',
+				title: 'Brand',
 			},
 			{
 				circles: [
@@ -126,7 +126,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'UI/UX',
+				title: 'UI/UX',
 			},
 			{
 				circles: [
@@ -144,7 +144,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'UI/UX',
+				title: 'UI/UX',
 			},
 			{
 				circles: [
@@ -162,7 +162,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Brand',
+				title: 'Brand',
 			},
 			{
 				circles: [
@@ -180,7 +180,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Brand & Media',
+				title: 'Brand & Media',
 			},
 			{
 				circles: [
@@ -198,7 +198,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Mograph',
+				title: 'Mograph',
 			},
 			{
 				circles: [
@@ -216,7 +216,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Mograph',
+				title: 'Mograph',
 			},
 			{
 				circles: [
@@ -234,7 +234,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Media',
+				title: 'Media',
 			},
 			{
 				circles: [
@@ -252,7 +252,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Media & Productions',
+				title: 'Media & Productions',
 			},
 			{
 				circles: [
@@ -270,7 +270,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Media',
+				title: 'Media',
 			},
 			{
 				circles: [
@@ -288,7 +288,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Media',
+				title: 'Media',
 			},
 			{
 				circles: [
@@ -306,7 +306,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Media',
+				title: 'Media',
 			},
 			{
 				circles: [
@@ -324,7 +324,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Productions',
+				title: 'Productions',
 			},
 			{
 				circles: [
@@ -342,7 +342,7 @@ export const teamData = [
 		activeImage: false,
 		skills: [
 			{
-				title : 'Administrative',
+				title: 'Administrative',
 			},
 			{
 				circles: [
