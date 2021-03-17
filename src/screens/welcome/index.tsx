@@ -12,7 +12,8 @@ const gray = '#929497';
 const pureBlack = '#000000';
 const blue = '#0853DC';
 const helvetica = 'HelveticaNeue';
-const helveticaBold = "HeltevicaNeueBold";
+const helveticaBold = 'HeltevicaNeueBold';
+const white = '#FFFFFF'
 
 const Welcome = (props) => {
 
@@ -114,7 +115,7 @@ const Welcome = (props) => {
 
 			<style jsx> {`
 			._description {
-			background-color: #ffffff;
+			background-color: ${white};
 			width: 50%;
 			height: 50%;
 			font-family: ${helvetica};
@@ -126,13 +127,13 @@ const Welcome = (props) => {
 
 		._descriptionText {
 			padding: 20% 0 10% 15%;
-			background-color: #ffffff;
+			background-color: ${white};
 		}
 
 		._target {
 			font-family: ${helvetica};
 			width: 50%;
-			background-color: #ffffff;
+			background-color: ${white};
 			font-size: 1rem;
 		}
 
@@ -140,13 +141,13 @@ const Welcome = (props) => {
 			display: flex;
 			justify-content: space-between;
 			width: 50%;
-			background-color: #ffffff;	
+			background-color: ${white};	
 		}
 
 		._targetRight {
 			font-family: ${helvetica};
 			color: $gray;
-			background-color: #ffffff;
+			background-color: ${white};
 		}
 
 		._targetRight:first-child {
@@ -163,7 +164,7 @@ const Welcome = (props) => {
 			font-family: ${helvetica};
 			font-size: 14px;
 			margin-right: 15%;
-			background-color: #ffffff;
+			background-color: ${white};
 
 		}
 
@@ -185,7 +186,7 @@ const Welcome = (props) => {
 			bottom: 15%;
 			color: ${gray};
 			width: 30%;
-			background-color: #ffffff;
+			background-color: ${white};
 			font-family: ${helvetica};
 		}
 
@@ -203,7 +204,7 @@ const Welcome = (props) => {
 			line-height: 1.2;
 			opacity: 1;
 			font-size: 5rem;
-			background-color: #ffffff;
+			background-color: ${white};
 		}
 
 		._concept {
@@ -212,7 +213,7 @@ const Welcome = (props) => {
 			justify-content: flex-end;
 			width: 100%;
 			height: 40%;
-			background-color: #ffffff;
+			background-color: ${white};
 		}
 
 		._separator {
@@ -236,7 +237,7 @@ const Welcome = (props) => {
 			font-family: ${helvetica};
 			font-size: 12px;
 			background-color: ${pureBlack};
-			color: #ffffff;
+			color: ${white};
 			border: none;
 			width: 70px;
 			margin-right: 50px;

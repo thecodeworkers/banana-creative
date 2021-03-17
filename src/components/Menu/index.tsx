@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import { ToggleButton } from './../../assets/img';
 import { gsapMenuStart, gsapMenuEnd } from './gsap'
 import styles from './styles.module.scss';
@@ -12,6 +12,10 @@ const Menu: React.FC<menuProps> = (props) => {
 
     const { menu, action, reference } = props;
     const router = useRouter();
+
+    const white = '#FFFFFF'
+    const helvetica = 'HelveticaNeue';
+    const blackie = '#323031'
 
     useEffect(() => {
         if (menu.opened) gsapMenuStart();
@@ -107,7 +111,7 @@ const Menu: React.FC<menuProps> = (props) => {
 
             <style jsx>{`
             ._sectionBlack {
-            background-color: #323031;
+            background-color: ${blackie};
             width: 60%;
             transform: translateX(100%);
             height: 100%;
@@ -120,29 +124,26 @@ const Menu: React.FC<menuProps> = (props) => {
             }
 
             ._breadCrumbtextOne{
-            font-family: $helvetica;
+            font-family: ${helvetica};
             writing-mode: vertical-lr;
             margin-bottom: 30px;
             margin-right: 30px;
-            color: #FFFFFF;
+            color: ${white};
             opacity: 0;
             transform: translate(30px) rotate(-180deg);
-            font-family: helvetica
             }
 
             ._blackFooterLine {
             width: 0%;
             height: 1.5px;
-            background-color: #FFFFFF;
-            // display: block;
-            // margin-left: auto;
+            background-color: ${white};
             position: absolute;
             bottom: 20%;
             }
 
             ._blackFooterHover {
             position: absolute;
-            background-color: #323031;
+            background-color: ${blackie};
             width: 100%;
             height: 160%;
             z-index: 1;
@@ -151,7 +152,7 @@ const Menu: React.FC<menuProps> = (props) => {
 
             ._blackHeaderHover {
             position: absolute;
-            background-color: #323031;
+            background-color: ${blackie};
             width: 100%;
             height: 10vh;
             z-index: 1;
@@ -159,7 +160,7 @@ const Menu: React.FC<menuProps> = (props) => {
 
             ._blackBodyFooterHover {
             position: absolute;
-            background-color: #323031;
+            background-color: ${blackie};
             width: 100%;
             height: 100%;
             z-index: 1;
@@ -171,7 +172,7 @@ const Menu: React.FC<menuProps> = (props) => {
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            color: $white;
+            color: ${white};
             opacity: 0;
             margin-right: 5%;
             }  

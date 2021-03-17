@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import { NavBar, Menu, VerticalBreadcrumb } from '../../components';
 import { Welcome, AllFeatured } from '../../screens';
 import { bigCursor, smallCursor, whiteCursor, smallWhiteCursor } from '../../utils/cursor';

@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { propsType } from './types';
 import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const texts: Array<any> = [
 	{ class: '._textDescription1', duration: 0.6, delay: 0.4 },
@@ -20,7 +20,7 @@ const texts: Array<any> = [
 
 const white = '#FFFFFF'
 const helvetica = 'HelveticaNeue';
-const helveticaBold = "HeltevicaNeueBold";
+const helveticaBold = 'HeltevicaNeueBold';
 
 const Featured = (props: propsType) => {
 

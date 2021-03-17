@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { changeBreadcrumb, setTheme } from '../../store/actions';
 import { propsType } from './interface';
 import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const FeaturedTwo: FC<propsType> = ({ imageDescription, date, keywords, title, subtitle, description, descriptionTwo, descriptionThree, descriptionFour, number, image, action, transition = false, id, theme }) => {
 
@@ -66,10 +66,13 @@ const FeaturedTwo: FC<propsType> = ({ imageDescription, date, keywords, title, s
 	const outBackSection = (tl: any) => {
 
 		inAnimation(true);
+		console.log('hola');
+		
 		if (transition) {
 			action.setTheme(false);
+			console.log('adios');
 
-			tl.to(['._principal', '._featuredTwoChild'], { backgroundColor: 'FFFFFF' });
+			tl.to(['._principal', '._featuredTwoChild'], { backgroundColor: '#FFFFFF' });
 
 			setTimeout(() => {
 				action.changeBreadcrumb({
