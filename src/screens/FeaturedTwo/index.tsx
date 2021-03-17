@@ -82,13 +82,10 @@ const FeaturedTwo: FC<propsType> = ({ imageDescription, date, keywords, title, s
 		inAnimation(false);
 	}
 
-	const outSection = () => {
+	const outSection = () => inAnimation(true);
 
-		inAnimation(true);
-	};
 
 	const triggerAction = () => {
-		;
 
 		let tl = gsap.timeline({
 			scrollTrigger: {
@@ -101,7 +98,6 @@ const FeaturedTwo: FC<propsType> = ({ imageDescription, date, keywords, title, s
 				onLeave: () => outSection()
 			}
 		})
-
 	}
 
 	return (
@@ -168,7 +164,6 @@ const FeaturedTwo: FC<propsType> = ({ imageDescription, date, keywords, title, s
 				margin-left: 20%;
 				margin-top: -0.8rem;
 				opacity: 0;
-			 	@include opacity;
 			  }
 			  ._textDescriptionOne, 
 			  ._textDescriptionTwo,
