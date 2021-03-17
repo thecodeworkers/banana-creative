@@ -115,7 +115,7 @@ const Welcome = (props) => {
 
 			<style jsx> {`
 			._description {
-			background-color: ${white};
+			background-color: #FFFFFF;
 			width: 50%;
 			height: 50%;
 			font-family: ${helvetica};
@@ -127,13 +127,13 @@ const Welcome = (props) => {
 
 		._descriptionText {
 			padding: 20% 0 10% 15%;
-			background-color: ${white};
+			background-color: #FFFFFF;
 		}
 
 		._target {
 			font-family: ${helvetica};
 			width: 50%;
-			background-color: ${white};
+			background-color: #FFFFFF;
 			font-size: 1rem;
 		}
 
@@ -141,13 +141,13 @@ const Welcome = (props) => {
 			display: flex;
 			justify-content: space-between;
 			width: 50%;
-			background-color: ${white};	
+			background-color: #FFFFFF;	
 		}
 
 		._targetRight {
 			font-family: ${helvetica};
 			color: $gray;
-			background-color: ${white};
+			background-color: #FFFFFF;
 		}
 
 		._targetRight:first-child {
@@ -164,7 +164,7 @@ const Welcome = (props) => {
 			font-family: ${helvetica};
 			font-size: 14px;
 			margin-right: 15%;
-			background-color: ${white};
+			background-color: #FFFFFF;
 
 		}
 
@@ -186,7 +186,7 @@ const Welcome = (props) => {
 			bottom: 15%;
 			color: ${gray};
 			width: 30%;
-			background-color: ${white};
+			background-color: #FFFFFF;
 			font-family: ${helvetica};
 		}
 
@@ -204,7 +204,7 @@ const Welcome = (props) => {
 			line-height: 1.2;
 			opacity: 1;
 			font-size: 5rem;
-			background-color: ${white};
+			background-color: #FFFFFF;
 		}
 
 		._concept {
@@ -213,7 +213,7 @@ const Welcome = (props) => {
 			justify-content: flex-end;
 			width: 100%;
 			height: 40%;
-			background-color: ${white};
+			background-color: #FFFFFF;
 		}
 
 		._separator {
