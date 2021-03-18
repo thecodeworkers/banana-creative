@@ -1,13 +1,5 @@
 @import '../../../public//styles/index.scss';
 
-@mixin circle($color) {
-	width: 12px;
-	height: 12px;
-	background-color: $color;
-	border-radius: 50%;
-	margin: 0px 4px 0px 4px;
-}
-
 @mixin text($bold, $size) {
 	font-size: $size;
 	color: $gray;
@@ -43,7 +35,6 @@
 
 ._teamDescription {
 	box-sizing: border-box;
-	padding:  2% 4% 2% 4%;
 	background-color: $opacityGray;
 	-webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
@@ -64,17 +55,6 @@
 
 ._teamPosition {
 	@include text('', 0.9rem)
-}
-._yellowCircle {
-	@include circle($yellow);
-}
-
-._redCircle {
-	@include circle($red);
-}
-
-._purpleCircle {
-	@include circle($purple);
 }
 
 ._itemRow {
