@@ -158,6 +158,8 @@ const Welcome = (props) => {
 			width: 50%;
 			display: flex;
 			align-items: flex-end;
+			background-color: #FFFFFF;
+
 		}
 
 		._contactText {
@@ -165,7 +167,6 @@ const Welcome = (props) => {
 			font-size: 14px;
 			margin-right: 15%;
 			background-color: #FFFFFF;
-
 		}
 
 		._contactText::after {
