@@ -54,7 +54,7 @@ const NavBar: React.FC<navBarProps> = (props) => {
 	const navigateToHome = () => {
 		if (router.pathname != '/') router.push('/');
 		action.unfoldMenu(false);
-		// action.changeToggle(3);
+		action.changeToggle(3);
 	};
 
 	return (
