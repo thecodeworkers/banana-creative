@@ -28,12 +28,10 @@ const Menu: React.FC<menuProps> = (props) => {
     }
 
     const navigation = (route) => {
-        // const path = window.location.href;
-        // const splitPath = path.split('/');
-        // if (`/${splitPath[3]}` != route) 
+        if(router.pathname != '/about-us') router.push('/about-us');
         closeMenu();
         action.changeToggle(3);
-        router.push('/about-us');
+        
     }
 
     const scrolling = (ref, path) => {
@@ -61,9 +59,6 @@ const Menu: React.FC<menuProps> = (props) => {
                     </div>
                 </div>
                 <div className={'_blackBody'}>
-
-                    {/* <span style={{marginRight:150}} className={'vertical'}> <p data-hover="PORTFOLIO" className={'_blackBodyText'}>PORTFOLIO</p> </span> */}
-
                     <span className={styles.vertical}> <p data-hover="ABOUT US" className={styles._blackBodyText} onClick={() => navigation('/about-us')}>
                         ABOUT US </p>
                     </span>
