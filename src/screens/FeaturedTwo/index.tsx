@@ -90,7 +90,7 @@ const FeaturedTwo: FC<propsType> = ({ imageDescription, date, keywords, title, s
 		let tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: `#${id}`,
-				start: '-=300',
+				start: '-=10',
 				end: 'bottom',
 				onEnter: () => enterSection(tl),
 				onEnterBack: () => enterBackSection(tl),

@@ -11,7 +11,6 @@ const HomeScreen = () => {
 	const featured = useRef();
 
 	useEffect(() => {
-		console.log('hola');
 		
 		window.addEventListener('click', () => changeCursorStyles());
 		window.addEventListener('mousemove', () => cursorColor());
