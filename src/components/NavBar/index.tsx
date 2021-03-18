@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Logo, ToggleButton } from './../../assets/img';
+import { Logo, ToggleButton, BananaLogo } from './../../assets/img';
 import navBarProps from './interface';
 import { gsapMenuStart } from '../../components/Menu/gsap';
 import styles from './styles.module.scss';
@@ -63,7 +63,7 @@ const NavBar: React.FC<navBarProps> = (props) => {
 
 				{
 					!theme.theme
-						? <Logo firstColor='#161616' secondColor='#231f20' />
+						? <BananaLogo/>
 						: <Logo firstColor={colorChange ? '#FFFFFF' : null} secondColor={colorChange ? '#FFFFFF' : null} />
 				}
 
