@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "babel-plugin-module-resolver": "^4.1.0",
     "gsap": "^3.6.0",
     "i18next": "^19.9.2",
     "lottie-web": "^5.7.6",

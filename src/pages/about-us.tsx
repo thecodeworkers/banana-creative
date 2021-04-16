@@ -1,17 +1,20 @@
-import React from 'react';
-import { Welcome } from '../screens';
-import { NavBar, Menu, Gallery, Footer } from '../components';
+import React from 'react'
+import { useSelector } from 'react-redux'
+import wrapper from '@store'
+/* import { getPages } from '@store/actions' */
+import { AboutUs } from '@components'
 
-const AboutUs = () => {
-	return (
-		<>
-			<NavBar colorChange={false} />
-			<Menu />
-			<Welcome title='About us' component={false} />
-			<Gallery />
-			<Footer />
-		</>
-	)
-};
+const AboutUsPage = () => {
 
-export default AboutUs;
+ /*  const { page: { aboutPage: { about } } } = useSelector((state: any) => state) */
+
+  return (
+    <AboutUs content={''} />
+  )
+}
+
+/* export const getServerSideProps = wrapper.getServerSideProps(
+  ({ store }) => store.dispatch(getPages('aboutPage'))
+)
+ */
+export default AboutUsPage

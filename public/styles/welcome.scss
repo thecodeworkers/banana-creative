@@ -1,4 +1,4 @@
-@import '../styles/index.scss';
+@import '@styles/index.scss';
 
 $textHeight: 0px;
 // :root {
@@ -67,7 +67,7 @@ $textHeight: 0px;
 	width: 95%;
 
   ._target {
-    font-family: $helvetica;
+    font-family: $helveticaBold;
 		width: 50%;
 		@include background();
     font-size: 1rem;

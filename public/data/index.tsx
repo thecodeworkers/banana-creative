@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FeaturedImageTwo, FeaturedOne, FeaturedThree, FeaturedFour, FeaturedFive } from '../../src/components/Svg';
+import { FeaturedImageTwo, FeaturedOne, FeaturedThree, FeaturedFour, FeaturedFive } from '@images/svg';
 
 export const dataOne = {
 	imageDescription: 'Marca de ropa',
