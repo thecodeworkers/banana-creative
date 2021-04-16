@@ -1,6 +1,7 @@
 import React from 'react';
-import { FeaturedRight, FeaturedLeft } from './elements';
-import { dataOne, dataTwo, dataThree, dataFour, dataFive } from '../../../public/data';
+import  FeaturedRight  from '../FeaturedRight';
+import  FeaturedLeft  from '../FeaturedLeft';
+import { dataOne, dataTwo, dataThree, dataFour, dataFive } from '../../../../../public/data';
 
 const Featureds = () => (
 	<>

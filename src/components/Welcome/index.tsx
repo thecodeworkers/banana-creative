@@ -13,6 +13,7 @@ const pureBlack = '#000000';
 const blue = '#0853DC';
 const helvetica = 'HelveticaNeue';
 const helveticaBold = 'HeltevicaNeueBold';
+const helveticaMedium = 'HelveticaNeueMedium';
 const white = '#FFFFFF'
 
 const Welcome = (props) => {
@@ -83,9 +84,9 @@ const Welcome = (props) => {
 						<li className='_smallBodyText' id='text-6'>{t("innovation")}</li>
 					</ul>
 					<section className='_intermediate'>
-						<div className='_target'>BRAND, MOGRAPH, MEDIA, SOCIAL PRODUCTIONS, PROTOTYPE</div>
+						<div className='_target'>BRAND | UI - UX | MOTION GRAPHICS & 3D | SOCIAL MEDIA | PRODUCTIONS | PROTOTYPE | CLASSROOM </div>
 						<div className='_targetRightContainer'>
-							<div className='_targetRight'>Lorem ipsum serif avec iditium</div>
+							<div className='_targetRight'>It’s about purpose</div>
 							<div className='_targetRight'>est. 17’</div>
 						</div>
 						<div className='_separator'></div>
@@ -95,7 +96,8 @@ const Welcome = (props) => {
 							{(language == 'en' ? 'Español' : 'English')}
 						</button>
 						<div className='_contactText'>hello@bananadesign.io</div>
-						<div className='_contactText'>+58 412 222 2222</div>
+						<div className='_contactText'>+58 424 187 2382</div>
+						<div className='_contactText'>+58 424 837 8858</div>
 						<p className='_moreInfo'>
 							Somos un estudio creativo enfocado en ofrecer soluciones de diseño a nivel de Branding, Diseño Web,
 							Modelado 3D y Social Media. Trabajamos con innovadores que buscan mejorar el mundo a través de sus ideas y servicios.
@@ -106,9 +108,14 @@ const Welcome = (props) => {
 					</div>
 					<section className='_description'>
 						<div className='_descriptionText'>
-							BananaDesign es un studio creative enfocado en generar soluciones de diseño lorem ipsum dolor sit amet,
-							con sectetuer adipiscing elit. Aenean ligula eget dolor pretium, dolor sit.
+							Estudio creativo centrado en el diseño de nuevos lenguajes visuales para
+							marcas mundiales modernas, nuevas empresas y personas innovadoras
+							en todas partes. Nuestro objetivo es crear proyectos hermosos,
+							significativos y atemporales que no se limiten a simples modas.
           </div>
+				
+					<div className='_contactText'>hello@bananadesign.io</div>
+			
 					</section>
 				</div>
 			</div>
@@ -117,12 +124,13 @@ const Welcome = (props) => {
 			._description {
 			background-color: #FFFFFF;
 			width: 50%;
-			height: 50%;
 			font-family: ${helvetica};
-			font-weight: 500;
-			font-size: 20px;
+			font-weight: 900;
+			font-size: 22px;
 			line-height: 1.2;
 			color: ${pureBlack};
+			display:flex;
+			justify-content: center
 		}
 
 		._descriptionText {
@@ -131,10 +139,11 @@ const Welcome = (props) => {
 		}
 
 		._target {
-			font-family: ${helvetica};
+			font-family: ${helveticaBold};
 			width: 50%;
 			background-color: #FFFFFF;
 			font-size: 1rem;
+			font-weight: 700
 		}
 
 		._targetRightContainer {
@@ -163,10 +172,11 @@ const Welcome = (props) => {
 		}
 
 		._contactText {
-			font-family: ${helvetica};
-			font-size: 14px;
-			margin-right: 15%;
+			font-family: ${helveticaMedium};
+			font-size: 12px;
+			margin-right: 10%;
 			background-color: #FFFFFF;
+			font-weight: 900
 		}
 
 		._contactText::after {
@@ -235,7 +245,7 @@ const Welcome = (props) => {
 		}
 
 		._languageButton {
-			font-family: ${helvetica};
+			font-family: ${helveticaMedium};
 			font-size: 12px;
 			background-color: ${pureBlack};
 			color: ${white};
