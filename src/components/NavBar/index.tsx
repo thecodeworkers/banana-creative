@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Logo, ToggleButton, BananaLogo } from '../../assets/img';
+import { Logo, ToggleButton, BananaLogo } from '@images/components';
 import navBarProps from './interface';
 import { gsapMenuStart } from '../Menu/gsap';
 import styles from './styles.module.scss';

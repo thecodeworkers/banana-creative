@@ -26,7 +26,7 @@
       "@utils": ["./src/utils"],
       "@utils/*": ["./src/utils/*"],
       "@styles/*": ["./public/styles/*"],
-      "@images/*": ["./public/images"],
+      "@images/*": ["./public/images/*"],
     }
   },
   "include": [

@@ -2,7 +2,7 @@ import React, { useEffect, createRef, useState } from 'react';
 import styles from './styles.module.scss';
 import lottie from 'lottie-web';
 import animation from '../../../public/animations/BANANA_CREATIVE.json';
-import { setLoader } from '../../store/actions';
+import { setLoader } from '@store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Props } from './type';

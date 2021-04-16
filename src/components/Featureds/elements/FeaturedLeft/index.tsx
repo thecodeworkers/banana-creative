@@ -1,6 +1,6 @@
 import React, { useEffect, FC } from 'react';
 import styles from './styles.module.scss';
-import { Ai } from '../../../../assets/Svg';
+import { Ai } from '@images/svg';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { changeBreadcrumb, setTheme } from '@store/actions';

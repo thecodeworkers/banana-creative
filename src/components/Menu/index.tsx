@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ToggleButton } from './../../assets/img';
+import { ToggleButton } from '@images/components';
 import { gsapMenuStart, gsapMenuEnd } from './gsap'
 import styles from './styles.module.scss';
 import { bindActionCreators } from "redux";

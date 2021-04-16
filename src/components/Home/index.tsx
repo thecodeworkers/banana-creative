@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavBar, Menu, VerticalBreadcrumb, Welcome, Featureds  } from '@components';
 import { bigCursor, smallCursor, whiteCursor, smallWhiteCursor } from '@utils/cursor';
-import { Logo } from '../../assets/img';
+import { Logo } from '@images/components';
 import { rgb2hex } from '@utils/hexadecimal';
 
 const Home = () => {
