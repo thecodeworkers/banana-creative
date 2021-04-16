@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import { gsapStart, gsapRetract, gsapExpand } from './gsap';
-import { Arrow } from '../../components/Svg';
-import { changeToggle, setAnimationState } from '../../store/actions';
+import { Arrow } from '../../assets/Svg';
+import { changeToggle, setAnimationState } from '@store/actions';
 import { useTranslation } from 'react-i18next';
 import { withTrans } from '../../i18n/withTrans';
 import { connect } from 'react-redux';

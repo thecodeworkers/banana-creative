@@ -4,7 +4,7 @@ import { gsapMenuStart, gsapMenuEnd } from './gsap'
 import styles from './styles.module.scss';
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
-import { unfoldMenu, changeToggle } from '../../store/actions';
+import { unfoldMenu, changeToggle } from '@store/actions';
 import menuProps from './interface';
 import { useRouter } from 'next/router';
 

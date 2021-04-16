@@ -1,14 +1,14 @@
 import React, { useEffect, FC } from 'react';
 import styles from './styles.module.scss';
-import { Ai } from '../../components/Svg';
+import { Ai } from '../../../../assets/Svg';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { changeBreadcrumb, setTheme } from '../../store/actions';
+import { changeBreadcrumb, setTheme } from '@store/actions';
 import { propsType } from './interface';
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-const FeaturedTwo: FC<propsType> = ({ imageDescription, date, keywords, title, subtitle, description, descriptionTwo, descriptionThree, descriptionFour, number, image, action, transition = false, id, theme }) => {
+const FeaturedLeft: FC<propsType> = ({ imageDescription, date, keywords, title, subtitle, description, descriptionTwo, descriptionThree, descriptionFour, number, image, action, transition = false, id, theme }) => {
 
 	const texts: Array<any> = [
 		{ class: '._textDescriptionOne', duration: 0.6, delay: 0.4 },
@@ -208,4 +208,4 @@ const mapDispatchToProps = dispatch => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FeaturedTwo);
+export default connect(mapStateToProps, mapDispatchToProps)(FeaturedLeft);

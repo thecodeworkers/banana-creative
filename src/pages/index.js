@@ -1,12 +1,13 @@
-import Head from 'next/head';
-import { Loader } from '../components';
-import { HomeScreen } from '../screens';
+import { Loader, Home } from '../components';
 
-export default function Home() {
+const HomePage = () => {
   
   return (
     <Loader>
-      <HomeScreen />
+      <Home />
     </Loader>
   )
 }
+
+
+export default HomePage

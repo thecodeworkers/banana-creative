@@ -1,4 +1,4 @@
-@import '../../../public//styles/index.scss';
+@import '@styles/index.scss';
 
 @mixin text($bold, $size) {
 	font-size: $size;

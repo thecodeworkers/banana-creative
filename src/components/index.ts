@@ -4,3 +4,7 @@ export { default as VerticalBreadcrumb } from './VerticalBreadcrumb';
 export { default as Loader } from './Loader';
 export { default as Gallery } from './Gallery';
 export { default as Footer } from './Footer';
+export { default as Featureds } from './Featureds';
+export { default as Welcome } from './Welcome';
+export { default as AboutUs } from './AboutUs';
+export { default as Home } from './Home';

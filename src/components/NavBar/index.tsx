@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Logo, ToggleButton, BananaLogo } from './../../assets/img';
+import { Logo, ToggleButton, BananaLogo } from '../../assets/img';
 import navBarProps from './interface';
-import { gsapMenuStart } from '../../components/Menu/gsap';
+import { gsapMenuStart } from '../Menu/gsap';
 import styles from './styles.module.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { unfoldMenu, changeToggle } from '../../store/actions';
+import { unfoldMenu, changeToggle } from '@store/actions';
 import { gsap } from 'gsap';
 import { useRouter } from 'next/router';
 

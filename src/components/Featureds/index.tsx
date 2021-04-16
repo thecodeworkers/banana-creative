@@ -1,10 +1,10 @@
 import React from 'react';
-import { Featured, FeaturedTwo } from '../../screens';
+import { FeaturedRight, FeaturedLeft } from './elements';
 import { dataOne, dataTwo, dataThree, dataFour, dataFive } from '../../../public/data';
 
-const AllFeatured = () => (
+const Featureds = () => (
 	<>
-		<FeaturedTwo
+		<FeaturedLeft
 			imageDescription={dataOne.imageDescription}
 			date={dataOne.date}
 			keywords={dataOne.keywords}
@@ -18,7 +18,7 @@ const AllFeatured = () => (
 			transition={true}
 			id={dataOne.id}
 		/>
-		<Featured
+		<FeaturedRight
 			imageDescription={dataTwo.imageDescription}
 			date={dataTwo.date}
 			keywords={dataTwo.keywords}
@@ -32,7 +32,7 @@ const AllFeatured = () => (
 			image={dataTwo.image}
 			id={dataTwo.id}
 		/>
-		<FeaturedTwo
+		<FeaturedLeft
 			imageDescription={dataThree.imageDescription}
 			date={dataThree.date}
 			keywords={dataThree.keywords}
@@ -45,7 +45,7 @@ const AllFeatured = () => (
 			image={dataThree.image}
 			id={dataThree.id}
 		/>
-		<Featured
+		<FeaturedRight
 			imageDescription={dataFour.imageDescription}
 			date={dataFour.date}
 			keywords={dataFour.keywords}
@@ -59,7 +59,7 @@ const AllFeatured = () => (
 			image={dataFour.image}
 			id={dataFour.id}
 		/>
-		<FeaturedTwo
+		<FeaturedLeft
 			imageDescription={dataFive.imageDescription}
 			date={dataFive.date}
 			keywords={dataFive.keywords}
@@ -75,4 +75,4 @@ const AllFeatured = () => (
 	</>
 );
 
-export default AllFeatured;
+export default Featureds;

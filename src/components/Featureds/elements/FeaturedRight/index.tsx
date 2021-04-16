@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './styles.module.scss';
-import { Ai } from '../../components/Svg';
-import { changeBreadcrumb, setTheme } from '../../store/actions';
+import { Ai } from '../../../../assets/Svg';
+import { changeBreadcrumb, setTheme } from '@store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { propsType } from './types';
@@ -22,7 +22,7 @@ const white = '#FFFFFF'
 const helvetica = 'HelveticaNeue';
 const helveticaBold = 'HeltevicaNeueBold';
 
-const Featured = (props: propsType) => {
+const FeaturedRight = (props: propsType) => {
 
 	const { imageDescription, date, keywords, title, subtitle, description, descriptionTwo, descriptionThree, descriptionFour, number, image, id } = props;
 
@@ -160,5 +160,5 @@ const mapDispatchToProps = dispatch => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Featured);
+export default connect(mapStateToProps, mapDispatchToProps)(FeaturedRight);
 
