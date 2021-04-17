@@ -8,16 +8,6 @@ import { propsType } from './types';
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-const texts: Array<any> = [
-	{ class: '._textDescription1', duration: 0.6, delay: 0.4 },
-	{ class: '._textDescription2', duration: 0.6, delay: 0.6 },
-	{ class: '._textDescription3', duration: 0.6, delay: 0.8 },
-	{ class: '._textDescription4', duration: 0.6, delay: 1 },
-	{ class: '._zeroOne', duration: 0.3, delay: 0.7 },
-	{ class: '._mineralsTitle', duration: 0.3, delay: 0.9 },
-	{ class: '._mineralsSubTitle', duration: 0.3, delay: 0.9 },
-];
-
 const white = '#FFFFFF'
 const helvetica = 'HelveticaNeue';
 const helveticaBold = 'HeltevicaNeueBold';
@@ -37,14 +27,12 @@ const FeaturedRight = (props: propsType) => {
 
 		if (param) {
 			timeline.play()
-			texts.forEach(res => { timeline.to(res.class, 0.1, { opacity: 0 }, 0.1) })
+			.to(['._parragraphParent', '._title'], 1, { opacity: 0 }, 0.1)
+			return;
 		}
 
-		if (!param) {
-			timeline.play()
-				.to(['._zeroOne', '._mineralsTitle', '._mineralsSubTitle'], { opacity: 1 }, 0.4);
-			texts.forEach(res => { timeline.to(res.class, res?.duration, { opacity: 1 }, res?.delay) })
-		}
+		timeline.play()
+		.to(['._parragraphParent', '._title'], 1, { opacity: 1 }, 0.1)
 	}
 
 	const enterBackSection = () => inAnimation(false);
@@ -56,8 +44,8 @@ const FeaturedRight = (props: propsType) => {
 		let tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: `#${id}`,
-				start: '-=300',
-				end: 'bottom',
+				start: '-=30',
+				end: 'center',
 				onEnter: () => enterSection(),
 				onEnterBack: () => enterBackSection(),
 				onLeaveBack: () => outBackSection(),
@@ -69,45 +57,45 @@ const FeaturedRight = (props: propsType) => {
 	return (
 		<div className={styles._main} id={id}>
 			<div className={styles._featuredContent}>
-				<div className={styles._leftFeaturedContent}>
-					<div className={styles._leftDescription}>
-						<div>
-							<p className='_zeroOne'> {number} </p>
-							<p className='_mineralsTitle'> {title} </p>
-							<p className='_mineralsSubTitle'> {subtitle} </p>
-							<div className={styles._loremText}>
-								<p className='_textDescription1'> {description} </p>
-								<p className='_textDescription2'> {descriptionTwo} </p>
-								<p className='_textDescription3'> {descriptionThree} </p>
-								<p className='_textDescription4'> {descriptionFour} </p>
+				<div className={styles._parent}>
+					<div className={styles._leftFeaturedContent}>
+						<div className={styles._leftDescription}>
+							<h2 className='_title'> Rancho Pirata</h2>
+							<div className='_parragraphParent'>
+								<p > 2021 </p>
+								<p>
+									Branding para compañía de turismo en Los Roques, que nace de una
+									casa construida con materiales 100% reciclados y busca ser una vivienda
+									sustentable y eco amigable donde reine el sentimiento de comunidad.
+	 							</p>
+								<p>
+									El branding se construyó a partir de un lettering bucanero que le diera ese
+									estilo caribeño y a la vez gotico, pero manifestando elegancia y
+									modernismo al mismo tiempo. Acompañado por una paleta de colores
+									que invita a la aventura y al disfrute del mar.
+	 							</p>
 							</div>
 						</div>
 					</div>
+
+					<div className={styles._rightFeaturedContent}>
+						<div className={styles._imgParent}>
+							<img src={image} width='100%'></img>
+							<div className={styles._keywords}>
+								<p className={styles._caseOfStudy}> {imageDescription} </p>
+								<p className={styles._textDay}> {date} </p>
+								<div className={styles._logosParent}>
+									<img src='images/logos/ps.png' alt='ps' width='30px' />
+									<img src='images/logos/ps.png' alt='ps' width='30px' />
+									<img src='images/logos/ps.png' alt='ps' width='30px' />
+								</div>
+							</div>
+						</div>
+						<div>
+						</div>
+					</div>
 				</div>
 
-				<div className={styles._rightFeaturedContent}>
-
-					<div className={styles._featuredTools}>
-						<p className={styles._toolsText}> tools </p>
-						<div className={styles._toolsParent}>
-							<Ai />
-						</div>
-
-						<div className={styles._toolsParent}>
-							<Ai />
-						</div>
-					</div>
-					<div className={styles._imgParent}>
-						{image}
-						<div className={styles._keywords}>
-							<p className={styles._caseOfStudy}> {imageDescription} </p>
-							<p className={styles._textDay}> {date} </p>
-							<p className={styles._keywordText}> {keywords} </p>
-						</div>
-					</div>
-					<div>
-					</div>
-				</div>
 			</div>
 			<style jsx> {`
 			._zeroOne {
@@ -133,15 +121,16 @@ const FeaturedRight = (props: propsType) => {
 				margin-top: -0.8rem;
 				opacity: 0;
 			  }
-			  ._textDescription1,
-			  ._textDescription2,
-			  ._textDescription3,
-			  ._textDescription4 {
-				opacity: 0;
-				font-family: ${helvetica};
-			}
-			
-			}`
+
+				._parragraphParent {
+					margin-bottom: 3rem;
+					opacity: 0;
+				}
+
+				._title { 
+					opacity: 0;
+				}
+			`
 			}</style>
 		</div>
 	)

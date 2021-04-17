@@ -3,79 +3,53 @@ import React from 'react';
 import { FeaturedImageTwo, FeaturedOne, FeaturedThree, FeaturedFour, FeaturedFive } from '@images/svg';
 
 export const dataOne = {
+	otheimage: 'images/featured/icons.png',
 	imageDescription: 'Marca de ropa',
 	date: 'Marzo 20’',
 	keywords: 'Moda y modelado 3D',
 	title: 'STAY UP',
-	number: '01 -',
-	description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	descriptionTwo: 'Earum ipsa tenetur reprehenderit excepturi sapiente',
-	descriptionThree: 'quam eaque itaque numquam nobis mollitia porro cum a',
-	descriptionFour: 'voluptate distinctio voluptates aliquid repellat soluta? Ipsa.',
-	image: <FeaturedThree />,
+	image: 'images/featured/rancho-pirata.png',
 	id: 'featuredOne',
 	transition: true
 }
 
 export const dataTwo = {
-	imageDescription: 'Caso de estudio',
+	otheimage: 'images/featured/icons.png',
+	imageDescription: 'Marca de ropa',
 	date: 'Marzo 20’',
-	keywords: 'keyword1, keyword2',
-	title: 'Banana',
-	subtitle: 'Minerals',
-	number: '02 -',
-	description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	descriptionTwo: 'Earum ipsa tenetur reprehenderit excepturi sapiente',
-	descriptionThree: 'quam eaque itaque numquam nobis mollitia porro cum a',
-	descriptionFour: 'voluptate distinctio voluptates aliquid repellat soluta? Ipsa.',
-	image: <FeaturedOne />,
+	keywords: 'Moda y modelado 3D',
+	title: 'STAY UP',
+	image: 'images/featured/rancho-pirata.png',
 	id:'featuredTwo'
 }
 
 export const dataThree = {
-	imageDescription: 'Diseño de  Empaque',
+	otheimage: 'images/featured/icons.png',
+	imageDescription: 'Marca de ropa',
 	date: 'Marzo 20’',
-	keywords: 'keyword1, keyword2',
+	keywords: 'Moda y modelado 3D',
 	title: 'STAY UP',
-	number: '03 -',
-	description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	descriptionTwo: 'Earum ipsa tenetur reprehenderit excepturi sapiente',
-	descriptionThree: 'quam eaque itaque numquam nobis mollitia porro cum a',
-	descriptionFour: 'voluptate distinctio voluptates aliquid repellat soluta? Ipsa.',
-	image: <FeaturedImageTwo />,
+	image: 'images/featured/rancho-pirata.png',
 	id:'featuredThree'
-
 }
 
 export const dataFour = {
-	imageDescription: 'Marca',
+	otheimage: 'images/featured/icons.png',
+	imageDescription: 'Marca de ropa',
 	date: 'Marzo 20’',
-	keywords: 'Brand',
+	keywords: 'Moda y modelado 3D',
 	title: 'STAY UP',
-	subtitle: 'STAY UP',
-	number: '04 -',
-	description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	descriptionTwo: 'Earum ipsa tenetur reprehenderit excepturi sapiente',
-	descriptionThree: 'quam eaque itaque numquam nobis mollitia porro cum a',
-	descriptionFour: 'voluptate distinctio voluptates aliquid repellat soluta? Ipsa.',
-	image: <FeaturedFour />,
+	image: 'images/featured/rancho-pirata.png',
 	id:'featuredFour'
-
 }
 
 export const dataFive = {
-	imageDescription: 'Producción Holy Chicken',
+	otheimage: 'images/featured/icons.png',
+	imageDescription: 'Marca de ropa',
 	date: 'Marzo 20’',
-	keywords: 'Productions',
+	keywords: 'Moda y modelado 3D',
 	title: 'STAY UP',
-	subtitle: 'STAY UP',
-	number: '05 -',
-	description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	descriptionTwo: 'Earum ipsa tenetur reprehenderit excepturi sapiente',
-	descriptionThree: 'quam eaque itaque numquam nobis mollitia porro cum a',
-	descriptionFour: 'voluptate distinctio voluptates aliquid repellat soluta? Ipsa.',
-	image: <FeaturedFive />,
+	image: 'images/featured/rancho-pirata.png',
 	id:'featuredFive'
-
 }
 
