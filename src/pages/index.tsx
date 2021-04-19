@@ -7,8 +7,6 @@ const HomePage = () => {
 
  const state = useSelector(state => state) 
 
- console.log(state)
-
   return (
     <Loader>
       <Home />
