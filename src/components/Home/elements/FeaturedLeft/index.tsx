@@ -21,6 +21,17 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 		triggerAction();
 	}, []);
 
+	useEffect(() => {
+		document.addEventListener('mousemove', moveCircle)
+	}, [])
+
+	const moveCircle = (event) => {
+		const timeline = gsap.timeline();
+		timeline.play()
+
+		.to('._circle', 1.5, {  x: event.clientX, y: event.clientY })
+	}
+
 	const inAnimation = (param) => {
 		let timeline = gsap.timeline();
 
@@ -94,10 +105,13 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 
 	return (
 		<div className='_principal' id={id}>
+
+		
 			<div className='_featuredTwoChild'>
 
 				<div className={styles._parent}>
 					<div className={styles._leftDivFeatured}>
+					<div className='_circle'></div>
 						<div className={styles._imageDad}>
 							<img src={currentImage} width='100%' ></img>
 							<div className={styles._keywordsTwo}>
@@ -170,7 +184,7 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
         font-family: ${helvetica};
       }
       ._principal {
-        background-color:${white};;
+        background-color:${white};
         width: 100%;
         height: 100vh;
         box-sizing: border-box;
@@ -194,6 +208,15 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 
 			._titleOne {
 				opacity: 0;
+			}
+
+			._circle {
+				width: 50px;
+				height: 50px;
+				background-color: #1976d2;
+				position: absolute;
+				border-radius: 50%;
+				display: block;
 			}
 			`
 			}</style>

@@ -27,6 +27,9 @@
  
 ._leftDivFeatured {
     width: 55%;
+    position: relative;
+    overflow: hidden;
+    // cursor: none;
 }
  
  
@@ -105,3 +108,4 @@
     margin-right: 0;
   }
 }
+
