@@ -13,6 +13,10 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 
 	const [ currentImage, setCurrentImage ] = useState(image)
 
+	const [ xPosition, setXPosition] = useState(0)
+	const [ yPosition, setYPosition] = useState(0)
+	const [ showCircle, setShowCircle ] = useState(false)
+
 	const helvetica = 'HelveticaNeue';
 	const helveticaBold = "HeltevicaNeueBold";
 	const white = '#FFFFFF'
@@ -22,14 +26,38 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 	}, []);
 
 	useEffect(() => {
-		document.addEventListener('mousemove', moveCircle)
-	}, [])
+		 document.addEventListener('mousemove', moveCircle);
+
+	
+
+		 if(!showCircle) {
+			 
+		 const timeline = gsap.timeline();
+			timeline.play()
+
+			// .to('._circle', 0.6, { width: '0px', height: '0px'}, 0.1)
+			.to(['._text', '._circle'], 0.3, { css: { scale: 0 }})
+		 }
+
+		 if(showCircle) {
+			 
+		 const timeline = gsap.timeline();
+			timeline.play()
+			
+			// .to('._circle', 0.6, { width: '90px', height: '90px' }, 0.1)
+			.to(['._text', '._circle'], 0.6, { css: { scale: 1}})
+		 }
+
+		 console.log(showCircle)
+	}, [showCircle])
 
 	const moveCircle = (event) => {
 		const timeline = gsap.timeline();
-		timeline.play()
+		let x = event.clientX;
+		let y = event.clientY;
 
-		.to('._circle', 1.5, {  x: event.clientX, y: event.clientY })
+		timeline.play()
+		.to('._circle', 1, { x, y });
 	}
 
 	const inAnimation = (param) => {
@@ -43,11 +71,12 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 
 		timeline.play()
 		.to(['._parragraphParentOne', '._titleOne'], 1, { opacity: 1 }, 0.1)
+
+	
 	}
 
 	const enterSection = (tl: any) => {
 
-		inAnimation(false);
 		if (transition) {
 			action.setTheme(true);
 			tl.to(['._principal', '._featuredTwoChild'], { backgroundColor: '#2C292A' });
@@ -103,17 +132,25 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 		setCurrentImage(param)
 	}
 
+	const circleStatus = () => {
+		setShowCircle(showCircle => !showCircle)
+
+	}
+
 	return (
 		<div className='_principal' id={id}>
-
-		
+			
 			<div className='_featuredTwoChild'>
-
-				<div className={styles._parent}>
-					<div className={styles._leftDivFeatured}>
-					<div className='_circle'></div>
-						<div className={styles._imageDad}>
-							<img src={currentImage} width='100%' ></img>
+				<div className={styles._parent} >
+					<div className={styles._leftDivFeatured} >
+						<div>
+						<div className='_circle'>
+						<p className='_text'> View </p>
+					</div>
+						</div>
+				
+						<div className={styles._imageDad} onMouseEnter={circleStatus} onMouseLeave={circleStatus}>
+							<img src={currentImage} width='100%'></img>
 							<div className={styles._keywordsTwo}>
 								<p className={styles._caseOfStudyTwo}> {imageDescription} </p>
 								<p className={styles._textDayTwo}> {date} </p>
@@ -188,6 +225,7 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
         width: 100%;
         height: 100vh;
         box-sizing: border-box;
+				background-color:green;
         }
  
       ._featuredTwoChild {
@@ -199,6 +237,7 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
         display: flex;
         align-items:center;
         background-color: ${white};
+				z-index: 999;
       }
 			
 			._parragraphParentOne {
@@ -211,13 +250,26 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 			}
 
 			._circle {
-				width: 50px;
-				height: 50px;
-				background-color: #1976d2;
-				position: absolute;
+				width: 90px;
+				height: 90px;
+				background-color: #231F20;
+				position: fixed;
 				border-radius: 50%;
-				display: block;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				top: 0px;
+				left: 0px;
+				transform: scale(0);
+				z-index: 2
 			}
+
+			._text {
+				transform: scale(0);
+				font-family: ${helvetica};
+				color: ${white};
+			}
+
 			`
 			}</style>
 		</div>
