@@ -29,26 +29,17 @@ const reduceArray = (quantity, array) => {
 }
 
 const setResources = (data, page, resources) => {
-  switch (resources) {
-    case 'aboutPage':
-      page.about.secondBanner.investors = reduceArray(4, page.about?.secondBanner?.investors);
-      break;
-    case 'forYouPage':
-      page.for_you.customers.commerces = reduceArray(4, page.for_you?.customers?.commerces);
-      break;
-  }
   data[resources] = page
   return data;
 }
 
 
 export const getPages: any = (resources) => async (dispatch, getState) => {
-
-  const result: any = await resource(resources)
+  const lang = 'ES'
+  const result: any = await resource(resources, lang)
   const { page } = getState()
   let data = page
-
-  console.log(data)
+  
   data = setResources(data, result, resources);
   dispatch(actionObject(GET_PAGES, data))
 }

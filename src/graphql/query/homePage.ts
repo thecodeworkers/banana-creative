@@ -1,14 +1,14 @@
 
-const home = `
-    homePage:page(id: "cG9zdDo1") {
-      welcome {
-        firstBanner {
-          subtitle
-          title
-          year
-        }
+const home = (lang) => `
+homePage:page(id: "cG9zdDozNQ==") {
+  translation(language: ${lang}) {
+    generals {
+      navigations {
+        firstRoute
       }
     }
+  }
+}
 `
 
 export default home
