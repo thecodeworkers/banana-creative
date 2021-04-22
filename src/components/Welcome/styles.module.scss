@@ -50,3 +50,19 @@ $bottomMoreInfoPosition: 15%;
 	@include background();
 	visibility: hidden;
 }
+
+._upContainer{
+	    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+._leftUpContainer{
+	background-color: green;
+	width: 50%;
+}
+._rightUpContainer{
+	background-color: yellow;
+	width: 50%;
+}

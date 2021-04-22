@@ -52,7 +52,7 @@ const Home = () => {
 			<NavBar colorChange={true} />
 			<Menu reference={featured} />
 			<VerticalBreadcrumb />
-			<Welcome title={<Logo />} component={true} />
+			<Welcome title={<Logo />} component={true} background={'#231F20'} />
 			<Featureds />
 		</div>
 	)

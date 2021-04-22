@@ -18,9 +18,10 @@ const white = '#FFFFFF'
 
 const Welcome = (props) => {
 
+
 	const { i18n } = useTranslation();
 	const [language, setLanguage] = useState('en');
-	const { loader, menu, t, action, title, toggle, component } = props;
+	const { loader, menu, t, action, title, toggle, component, background } = props;
 
 	useEffect(() => {
 		if (loader.loader && !loader.animation) gsapStart(action.setAnimationState(true));
@@ -62,7 +63,7 @@ const Welcome = (props) => {
 
 	return (
 		<>
-			<div className={styles._principalContainer}>
+			<div className={'_principalContainer'}>
 				<div className={styles._container}>
 					<section className='_concept'>
 						{/* <div className='_whiteBodyText' id='one'> {t("concept&purpose")} </div>
@@ -71,7 +72,16 @@ const Welcome = (props) => {
 						{
 							component
 								? <div className={styles._logoParentWelcome} id='three'>{title}</div>
-								: <div className='_whiteBodyText' id='three'> {t(title)} </div>
+								:
+								<div className={styles._upContainer}>
+								<div className={styles._leftUpContainer}>
+									<div className='_whiteBodyText' id='three'> Brands are meant to be </div>
+									</div>
+									<div className={styles._rightUpContainer}>
+									<div className='_whiteBodyText' id='three'> {t(title)} </div>
+									</div>
+								</div>
+
 						}
 
 					</section>
@@ -113,14 +123,19 @@ const Welcome = (props) => {
 							en todas partes. Nuestro objetivo es crear proyectos hermosos,
 							significativos y atemporales que no se limiten a simples modas.
           </div>
-				
-					<div className='_contactText'>hello@bananadesign.io</div>
-			
+
+						<div className='_contactText'>hello@bananadesign.io</div>
+
 					</section>
 				</div>
 			</div>
 
 			<style jsx> {`
+			._principalContainer {
+				padding: 10vh 2.5% 5vh 2.5%;
+				height: 100vh;
+				background-color: ${background}
+			}
 			._description {
 			background-color: #FFFFFF;
 			width: 50%;
@@ -215,7 +230,7 @@ const Welcome = (props) => {
 			line-height: 1.2;
 			opacity: 1;
 			font-size: 5rem;
-			background-color: #FFFFFF;
+			
 		}
 
 		._concept {
