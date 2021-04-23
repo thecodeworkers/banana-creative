@@ -1,5 +1,5 @@
 import withRedux from 'next-redux-wrapper';
-import initStore from '../store';
+import { wrapper } from '../store';
 import { Provider } from 'react-redux';
 import Head from 'next/head';
 import '../../styles/globals.css'
@@ -15,4 +15,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default initStore.withRedux(MyApp);
+export default wrapper.withRedux(MyApp);
