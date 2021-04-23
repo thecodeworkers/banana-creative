@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
 
 const Grid = () => {
+
   return (
     <div className={styles._main}>
       <div className={styles._filters}>
@@ -17,27 +18,65 @@ const Grid = () => {
 
       <div className={styles._grid}>
         <div className={styles._gridChild}>
-          <div className={styles._box2}>
-            <img src='images/portfolio/grid-1.png' ></img>
+          <div className={styles._column}> 
+            <div className={styles._itemParent}>
+              <div className={styles._item}>
+                <img src='images/portfolio/grid-1.png' alt='image' />
+              </div>
+            </div>
+
+            <div className={styles._itemParent}>
+              <div className={styles._item}>
+                <img src='images/portfolio/grid-1.png' alt='image' />
+              </div>
+            </div>
           </div>
 
-          <div className={styles._box2}>
-            <img src='images/portfolio/grid-2.png'></img>
+          <div className={styles._column}> 
+            <div className={styles._itemParent}>
+              <div className={styles._item}>
+                <img src='images/portfolio/grid-2.png' alt='image' />
+              </div>
+            </div>
+
+            <div className={styles._itemParent}>
+              <div className={styles._item}>
+                <img src='images/portfolio/grid-2.png' alt='image' />
+              </div>
+            </div>
           </div>
 
-          <div className={styles._box2}>
-            <img src='images/portfolio/grid-1.png' ></img>
+          <div className={styles._column}> 
+            <div className={styles._itemParent}>
+              <div className={styles._item}>
+                <img src='images/portfolio/grid-1.png' alt='image' />
+              </div>
+            </div>
+
+            <div className={styles._itemParent}>
+              <div className={styles._item}>
+                <img src='images/portfolio/grid-1.png' alt='image' />
+              </div>
+            </div>
           </div>
 
-          <div className={styles._box2}>
-            <img src='images/portfolio/grid-2.png'></img>
-          </div>
+          <div className={styles._column}>
+            <div className={styles._itemParent}>
+              <div className={styles._item}>
+                <img src='images/portfolio/grid-2.png' alt='image' />
+              </div>
+            </div>
 
-          <div className={styles._box2}>
-            <img src='images/portfolio/grid-1.png' ></img>
+            <div className={styles._itemParent}>
+              <div className={styles._item}>
+                <img src='images/portfolio/grid-2.png' alt='image' />
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+
     </div>
   )
 }

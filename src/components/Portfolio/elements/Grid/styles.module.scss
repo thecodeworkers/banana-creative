@@ -7,7 +7,6 @@
 }
 
 ._filters {
-  // background-color: blue;
   display: flex;
   justify-content: center;
 }
@@ -41,22 +40,34 @@
 }
 
 ._gridChild {
+  width: 100%;
+  min-height: 100vh;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
-  // grid-auto-rows: 0;
+  grid-template-columns: repeat(2,[col-start] .75fr 1fr [col-end]);
+  grid-column-gap: 10px;
+  overflow: hidden;
 }
 
-
-._box2 {
-  &:nth-child(2) > img {
-
-    background-color: red;
-  }
+._column { 
+  display: flex;
+  flex-direction: column;
 }
 
-._box2, ._box2 img {
-    // position: relative;
-     width: 100%;
-     
-  }
+._itemParent {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 150%;
+  margin-bottom: 10px;
+}
+
+._item {
+  background-color: blue;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
