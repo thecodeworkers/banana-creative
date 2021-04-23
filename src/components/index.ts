@@ -8,3 +8,4 @@ export { default as Welcome } from './Welcome';
 export { default as AboutUs } from './AboutUs';
 export { default as Home } from './Home';
 export { default as Featureds } from './Home/elements/Featureds';
+export { default as Portfolio } from './Portfolio';
