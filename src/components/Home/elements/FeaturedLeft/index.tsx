@@ -28,8 +28,6 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 	useEffect(() => {
 		 document.addEventListener('mousemove', moveCircle);
 
-	
-
 		 if(!showCircle) {
 			 
 		 const timeline = gsap.timeline();
@@ -57,7 +55,7 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 		let y = event.clientY;
 
 		timeline.play()
-		.to('._circle', 1, { x, y });
+		// .to('._circle', 1, { x, y });
 	}
 
 	const inAnimation = (param) => {
@@ -71,12 +69,11 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 
 		timeline.play()
 		.to(['._parragraphParentOne', '._titleOne'], 1, { opacity: 1 }, 0.1)
-
-	
 	}
 
 	const enterSection = (tl: any) => {
 
+		inAnimation(false)
 		if (transition) {
 			action.setTheme(true);
 			tl.to(['._principal', '._featuredTwoChild'], { backgroundColor: '#2C292A' });
@@ -225,7 +222,6 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
         width: 100%;
         height: 100vh;
         box-sizing: border-box;
-				background-color:green;
         }
  
       ._featuredTwoChild {
