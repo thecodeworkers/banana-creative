@@ -59,17 +59,30 @@ const NavBar: React.FC<navBarProps> = (props) => {
 
 	return (
 		<div className={`${styles._navBar} ${theme.theme && colorChange ? styles._dark : styles._ligth}`}>
-			<div className={styles._logoParent} onClick={navigateToHome}>
+			<div className={styles._rightContainer} >
+				<div className={styles._logoParent} onClick={navigateToHome}>
 
-				{
-					!theme.theme
-						? <BananaLogo/>
-						: <Logo firstColor={colorChange ? '#FFFFFF' : null} secondColor={colorChange ? '#FFFFFF' : null} />
-				}
+					{
+						!theme.theme
+							? <BananaLogo />
+							: <Logo firstColor={colorChange ? '#FFFFFF' : null} secondColor={colorChange ? '#FFFFFF' : null} />
+					}
+
+				</div>
 
 			</div>
-			<div className={styles._navBarToggleWrapper} onClick={outToggle} >
-				<ToggleButton className={styles._navBarToggle} />
+
+
+			<div className={styles._leftContainer} >
+				<div className={styles._timeContainer} >
+
+					<p className={styles._time}>Caracas</p>
+					<p className={styles._time}>3:34 PM</p>
+				</div>
+				<div className={styles._navBarToggleWrapper} onClick={outToggle}>
+					<ToggleButton className={styles._navBarToggle} />
+				</div>
+
 			</div>
 		</div>
 	)
