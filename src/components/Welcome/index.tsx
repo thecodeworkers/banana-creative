@@ -10,8 +10,9 @@ import { bindActionCreators } from 'redux';
 
 const gray = '#929497';
 const pureBlack = '#000000';
-const blue = '#0853DC';
+const thunder = '#231F20'
 const helvetica = 'HelveticaNeue';
+const helveticaNormalBold = 'HeltevicaBold';
 const helveticaBold = 'HeltevicaNeueBold';
 const helveticaMedium = 'HelveticaNeueMedium';
 const white = '#FFFFFF'
@@ -67,7 +68,6 @@ const Welcome = (props) => {
 					<section className='_concept'>
 						{/* <div className='_whiteBodyText' id='one'> {t("concept&purpose")} </div>
 					<div className='_whiteBodyText' id='two'> {t("beauty&function")} </div> */}
-
 						{
 							component
 								? <div className={styles._logoParentWelcome} id='three'>{title}</div>
@@ -76,11 +76,11 @@ const Welcome = (props) => {
 
 					</section>
 					<ul className={styles._list} id='list'>
-						<li className='_smallBodyText' id='text-1'>{t("concept")} </li>
-						<li className='_smallBodyText' id='text-2'>{t("purpose")}</li>
 						<li className='_smallBodyText' id='text-3'>{t("beauty")}</li>
 						<li className='_smallBodyText' id='text-4'>{t("function")}</li>
 						<li className='_smallBodyText' id='text-5'>{t("creation")}</li>
+						<li className='_smallBodyText' id='text-1'>{t("concept")} </li>
+						<li className='_smallBodyText' id='text-2'>{t("purpose")}</li>
 						<li className='_smallBodyText' id='text-6'>{t("innovation")}</li>
 					</ul>
 					<section className='_intermediate'>
@@ -99,8 +99,8 @@ const Welcome = (props) => {
 						<div className='_contactText'>+58 424 187 2382</div>
 						<div className='_contactText'>+58 424 837 8858</div>
 						<p className='_moreInfo'>
-							Somos un estudio creativo enfocado en ofrecer soluciones de diseño a nivel de Branding, Diseño Web,
-							Modelado 3D y Social Media. Trabajamos con innovadores que buscan mejorar el mundo a través de sus ideas y servicios.
+						Somos un estudio creativo enfocado en ofrecer soluciones de diseño a nivel de Branding, Diseño Web, Modelado 3Dy Social Media. Trabajamos con innovadores que buscan
+						mejorar el mundo a través de sus ideas y servicios.
 					</p>
 					</section>
 					<div className='_arrow' onClick={scrollToNextSection}>
@@ -113,9 +113,11 @@ const Welcome = (props) => {
 							en todas partes. Nuestro objetivo es crear proyectos hermosos,
 							significativos y atemporales que no se limiten a simples modas.
           </div>
-				
-					<div className='_contactText'>hello@bananadesign.io</div>
-			
+						<div className='_descriptionTextRigth'>
+							<div className='_contactRightText'>@_bananacreative</div>
+						</div>
+
+
 					</section>
 				</div>
 			</div>
@@ -130,11 +132,16 @@ const Welcome = (props) => {
 			line-height: 1.2;
 			color: ${pureBlack};
 			display:flex;
-			justify-content: center
+			justify-content: space-between;
+			flex-direction: column;
 		}
 
 		._descriptionText {
-			padding: 20% 0 10% 15%;
+			padding: 0 0 10% 15%;
+			background-color: #FFFFFF;
+		}
+		._descriptionTextRigth {
+			padding: 0 0 0 15%;
 			background-color: #FFFFFF;
 		}
 
@@ -168,7 +175,6 @@ const Welcome = (props) => {
 			display: flex;
 			align-items: flex-end;
 			background-color: #FFFFFF;
-
 		}
 
 		._contactText {
@@ -178,6 +184,14 @@ const Welcome = (props) => {
 			background-color: #FFFFFF;
 			font-weight: 900
 		}
+		._contactRightText {
+			font-family: ${helveticaMedium};
+			font-size: 12px;
+			background-color: #FFFFFF;
+			font-weight: 900
+			padding: 0 0 10% 15%;
+		}
+
 
 		._contactText::after {
 			display: block;
@@ -262,10 +276,10 @@ const Welcome = (props) => {
 			opacity: 0;
 			font-size: 1.75rem;
 			z-index: 2;
-			font-family: ${helveticaBold};
+			font-family: ${helveticaNormalBold};
 			line-height: 1.2;
 			font-weight: 900;
-			color: ${blue};
+			color: ${thunder};
 			padding-bottom: 0.625rem;
 		}
 		
