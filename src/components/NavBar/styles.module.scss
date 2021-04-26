@@ -50,3 +50,23 @@
 ._logoParent {
 	width: 9rem;
 }
+
+._leftContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+._rightContainer{
+  width: 50%;
+}
+._timeContainer{
+  padding-left: 15%;
+  display: flex;
+}
+
+._time{
+  font-size: 0.75rem;
+  font-family: $helveticaMedium;
+  color: $pureBlack;
+}

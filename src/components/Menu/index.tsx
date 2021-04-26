@@ -59,11 +59,11 @@ const Menu: React.FC<menuProps> = (props) => {
                     </div>
                 </div>
                 <div className={'_blackBody'}>
-                    <span className={styles.vertical}> <p data-hover="ABOUT US" className={styles._blackBodyText} onClick={() => navigation('/about-us')}>
-                        ABOUT US </p>
+                    <span className={styles.vertical}> <p data-hover="Portfolio" className={styles._blackBodyText} onClick={() => navigation('/about-us')}>
+                    Portfolio</p>
                     </span>
-                    <span className={styles.vertical}> <p data-hover="RECAP" className={styles._blackBodyText}>RECAP</p> </span>
-                    <span className={styles.vertical}> <p data-hover="RAW" className={styles._blackBodyText}>RAW</p> </span>
+                    <span className={styles.vertical}> <p data-hover="About us" className={styles._blackBodyText}>About us</p> </span>
+                    <span className={styles.vertical}> <p data-hover="Recap" className={styles._blackBodyText}>Recap</p> </span>
 
 
                 </div>
@@ -83,18 +83,19 @@ const Menu: React.FC<menuProps> = (props) => {
                         <div className={'_blackFooterHover'}>   </div>
                         <div className={styles._lh} >
                             <p className={styles._blackFooterText}>Contacto:</p>
-                            <p className={`${styles._blackFooterText} ${styles._mt}`} >hello@bananadesign.io</p>
-                            <p className={styles._blackFooterText}>+58 412 222 2222</p>
+                            <p className={`${styles._blackFooterText}`} >hello@bananadesign.io</p>
+                            <p className={styles._blackFooterText}>+58 424 187 2382</p>
+                            <p className={styles._blackFooterText}>+58 423 837 8853</p>
                         </div>
                         <div className={styles._lh} >
-                            <p className={styles._blackFooterTexx}>Buscas trabajar con nosotros?</p>
+                            <p className={styles._blackFooterText}>Buscas trabajar con nosotros?</p>
                             <p className={`${styles._blackFooterText} ${styles._mb}`}>Escríbenos a:</p>
-                            <p className={`${styles._blackFooterText} ${styles._mt}`}>work@bananadsg.com</p>
+                            <p className={`${styles._blackFooterText} ${styles._mt}`}>hello@bananacreative.io</p>
                         </div >
                         <div className={styles._lh} >
                             <p className={styles._blackFooterText}>No te pierdas de nada,</p>
                             <p className={`${styles._blackFooterText} ${styles._mb}`}>síguenos en:</p>
-                            <p className={`${styles._blackFooterText} ${styles._mt}`}>@bananadesign_</p>
+                            <p className={`${styles._blackFooterText} ${styles._mt}`}>@_bananacreative</p>
                         </div>
                     </div>
                 </div>
