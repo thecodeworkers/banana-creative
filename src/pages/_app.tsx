@@ -1,20 +1,10 @@
-import { useEffect } from 'react';
 import withRedux from 'next-redux-wrapper';
-import { useStore } from 'react-redux'
-import { wrapper } from '@store'
+import { wrapper } from '../store';
+import { Provider } from 'react-redux';
 import Head from 'next/head';
 import '../../styles/globals.css'
-import { useSelector } from 'react-redux'
 
-function WrappedApp({ Component, pageProps }) {
-
-  const { show } = useSelector((state: any) => state.loader)
-  const store = useStore()
-
-  useEffect(() => {
-    store.__persistor.persist()
-  }, [])
-
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -25,4 +15,4 @@ function WrappedApp({ Component, pageProps }) {
   )
 }
 
-export default wrapper.withRedux(WrappedApp);
+export default wrapper.withRedux(MyApp);
