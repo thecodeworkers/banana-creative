@@ -46,7 +46,6 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 			.to(['._text', '._circle'], 0.6, { css: { scale: 1}})
 		 }
 
-		 console.log(showCircle)
 	}, [showCircle])
 
 	const moveCircle = (event) => {
