@@ -14,7 +14,6 @@ const pages = async (resource: any) => {
   `
   const result: any = await GraphQlClient(query)
   
-  // return 'nodes' in result[resource] ? normalized(result[resource].nodes) : normalized(result[resource])
   return (result) ? 'nodes' in result[resource] ? normalized(result[resource].nodes) : normalized(result[resource]) : {}
 }
 
