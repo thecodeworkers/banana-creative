@@ -1,1 +1,2 @@
-export { default as resource } from './resource'
+export { default as pages } from './pages'
+export { default as resources } from './resources'
