@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import { gsapStart, gsapRetract, gsapExpand } from './gsap';
 import { Arrow } from '@images/svg';
-import { changeToggle, setAnimationState } from '@store/actions';
+import { changeToggle, setAnimationState, changeLanguage } from '@store/actions';
 import { useTranslation } from 'react-i18next';
 import { withTrans } from '../../i18n/withTrans';
 import { connect } from 'react-redux';
@@ -45,7 +45,7 @@ const Welcome = (props) => {
 		}, 20);
 	}
 
-	const changeLang = (event: any) => {
+	const changeLang = async (event: any) => {
 		const lang = event.target.value;
 		let text = '';
 		if (lang == 'en') {
@@ -57,6 +57,8 @@ const Welcome = (props) => {
 			setLanguage('en');
 			text = 'en';
 		}
+
+    await action.changeLanguage(lang.toUpperCase())
 
 		i18n.changeLanguage(text);
 	}
@@ -344,7 +346,8 @@ const mapStateToProps = ({ loader, menu, toggle }) => ({ loader, menu, toggle })
 const mapDispatchToProps = dispatch => {
 	const actions = {
 		changeToggle,
-		setAnimationState
+		setAnimationState,
+    changeLanguage
 	}
 
 	return {

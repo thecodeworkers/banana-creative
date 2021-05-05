@@ -6,7 +6,6 @@ const GraphQlClient = async (query, variables = {}) => {
   try {
     const headers = { 'Content-Type': 'application/json' }
     const response = await axios.post(WP_API_URL, { query, variables }, { headers })
-
     return response.data.data
 
   } catch(err) {

@@ -1,0 +1,1 @@
+export const generalId = 'cG9zdDozNQ=='
