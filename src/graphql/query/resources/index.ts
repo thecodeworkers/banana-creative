@@ -1,7 +1,7 @@
 import { GraphQlClient, normalized, normalizedArray } from '@utils'
 import generalQuery from './generalPage'
-const resource = async (language) => {
 
+const resource = async (language) => {
   const query = `
     query Resources {
       ${generalQuery(language)}

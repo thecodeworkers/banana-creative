@@ -11,7 +11,7 @@ export const getResources: any = () => async (dispatch, getState) => {
 
 export const changeLanguage: any = (language) => async (dispatch) => {
   const allResources = await resources(language);
-  console.log(allResources.general.values)
+
   dispatch(actionObject(SET_RESOURCES, allResources));
   dispatch(actionObject(SET_LANGUAGE, language))
 }

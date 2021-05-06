@@ -57,7 +57,7 @@ const Welcome = (props) => {
 			setLanguage('en');
 			text = 'en';
 		}
-
+    
     await action.changeLanguage(lang.toUpperCase())
 
 		i18n.changeLanguage(text);
