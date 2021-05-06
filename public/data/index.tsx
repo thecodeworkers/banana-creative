@@ -53,3 +53,13 @@ export const dataFive = {
 	id:'featuredFive'
 }
 
+export const dataSix = {
+	otheimage: 'images/featured/icons.png',
+	imageDescription: 'Marca de ropa',
+	date: 'Marzo 20’',
+	keywords: 'Moda y modelado 3D',
+	title: 'STAY UP',
+	image: 'images/featured/rancho-pirata.png',
+	id:'featuredSix'
+}
+
