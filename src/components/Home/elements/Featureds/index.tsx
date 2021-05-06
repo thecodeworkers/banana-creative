@@ -1,7 +1,7 @@
 import React from 'react';
 import  FeaturedRight  from '../FeaturedRight';
 import  FeaturedLeft  from '../FeaturedLeft';
-import { dataOne, dataTwo, dataThree, dataFour, dataFive } from '../../../../../public/data';
+import { dataOne, dataTwo, dataThree, dataFour, dataFive, dataSix } from '../../../../../public/data';
 
 const Featureds = () => (
 	<>
@@ -45,6 +45,14 @@ const Featureds = () => (
 			title={dataFive.title}
 			image={dataFive.image}
 			id={dataFive.id}
+		/>
+		<FeaturedRight
+			imageDescription={dataSix.imageDescription}
+			date={dataSix.date}
+			keywords={dataSix.keywords}
+			title={dataSix.title}
+			image={dataSix.image}
+			id={dataSix.id}
 		/>
 	</>
 );
