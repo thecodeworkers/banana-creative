@@ -12,7 +12,10 @@ welcomePage: page(id: "${welcomeId}") {
       secondSubtitle
       content
       moreInfo
-      year
+      recap{
+        title
+        link
+      }
     }
   }
 }

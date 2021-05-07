@@ -89,7 +89,7 @@ const Welcome = (props) => {
             <div className='_target'>{welcomePage?.welcome?.subtitle}</div>
             <div className='_targetRightContainer'>
               <div className='_targetRight'>{welcomePage?.welcome?.secondSubtitle}</div>
-              <div className='_targetRight'>{welcomePage?.welcome?.year}</div>
+              <a href={welcomePage?.welcome?.recap?.link}><div className='_targetRight _targetDownload'>{welcomePage?.welcome?.recap?.title} <span className='_targetSpan'>*</span></div></a>
             </div>
             <div className='_separator'></div>
           </section>
@@ -160,6 +160,21 @@ const Welcome = (props) => {
 			font-family: ${helvetica};
 			color: $gray;
 			background-color: #FFFFFF;
+		}
+
+    ._targetDownload {
+			font-family: ${helvetica};
+			color: #FF004E;
+			background-color: #FFFFFF;
+      font-weight: bolder;
+      display: flex;
+      align-items: center
+		}
+
+		._targetSpan{
+			display: block;
+			font-size: 4rem;
+			height: 2rem;
 		}
 
 		._targetRight:first-child {
