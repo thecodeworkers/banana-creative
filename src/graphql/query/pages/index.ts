@@ -1,10 +1,12 @@
 import { GraphQlClient, normalized } from '@utils'
 import welcomePageQuery from './welcomePage'
+import aboutPageQuery from './aboutPage'
 
 const pages = async (resource: any, language) => {
 
   const resources = {
     'welcomePage': welcomePageQuery(language),
+    'aboutPage': aboutPageQuery(language)
   }
 
   const query = `

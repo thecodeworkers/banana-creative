@@ -50,10 +50,7 @@ const Menu: React.FC<menuProps> = (props) => {
         <div className={styles._blackHeader}>
           <div className={'_blackHeaderHover'}></div>
           <div>
-            <p className={styles._addressText}>Torre Iasa</p>
-            <p className={styles._addressText}>La Castellana</p>
-            <p className={styles._addressText}>Oficina 802</p>
-            <p className={styles._addressText}>Caracas 1060</p>
+            {general?.generals?.address.split(',').map((textAddress, index) => <p key={index} className={styles._addressText}>{textAddress}</p>)}
           </div>
           <div className={styles._icon} onClick={closeMenu}>
             <ToggleButton fill={'#fff'} />
@@ -74,7 +71,7 @@ const Menu: React.FC<menuProps> = (props) => {
           <div className={styles._linksContainer}>
             <div className={'_blackBodyFooterHover'}></div>
             <ul className={styles._blackBodyList}>
-              {(general?.generals?.navigations) ? general.generals.navigations.slice(3, 6).map((nav, index) => 
+              {(general?.generals?.navigations) ? general.generals.navigations.slice(3, 6).map((nav, index) =>
               (
                 <li key={index}>
                   <a className={styles._blackBodyFooterText} onClick={() => scrolling(reference, '/')}>
@@ -92,19 +89,19 @@ const Menu: React.FC<menuProps> = (props) => {
             <div className={'_blackFooterHover'}>   </div>
             <div className={styles._lh} >
               <p className={styles._blackFooterText}>Contacto:</p>
-              <p className={`${styles._blackFooterText}`} >hello@bananadesign.io</p>
-              <p className={styles._blackFooterText}>+58 424 187 2382</p>
-              <p className={styles._blackFooterText}>+58 423 837 8853</p>
+              <p className={`${styles._blackFooterText}`} >{general?.generals?.email}</p>
+              <p className={styles._blackFooterText}>{general?.generals?.phoneOne}</p>
+              <p className={styles._blackFooterText}>{general?.generals?.phoneTwo}</p>
             </div>
             <div className={styles._lh} >
               <p className={styles._blackFooterText}>Buscas trabajar con nosotros?</p>
               <p className={`${styles._blackFooterText} ${styles._mb}`}>Escríbenos a:</p>
-              <p className={`${styles._blackFooterText} ${styles._mt}`}>hello@bananacreative.io</p>
+              <p className={`${styles._blackFooterText} ${styles._mt}`}>{general?.generals?.email}</p>
             </div >
             <div className={styles._lh} >
               <p className={styles._blackFooterText}>No te pierdas de nada,</p>
               <p className={`${styles._blackFooterText} ${styles._mb}`}>síguenos en:</p>
-              <p className={`${styles._blackFooterText} ${styles._mt}`}>@_bananacreative</p>
+              <p className={`${styles._blackFooterText} ${styles._mt}`}>{general?.generals?.insta}</p>
             </div>
           </div>
         </div>

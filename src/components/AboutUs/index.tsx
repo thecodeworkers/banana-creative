@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavBar, Menu, Welcome, Gallery, Footer } from '@components';
 
-const AboutUs = ({content}) => {
+const AboutUs = () => {
 
   return (
     <div >

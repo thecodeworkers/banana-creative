@@ -21,7 +21,7 @@ const Welcome = (props) => {
 
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState('en');
-  const { loader, menu, t, action, title, toggle, component, page: { welcomePage } } = props;
+  const { loader, menu, t, action, title, toggle, component, page, resource: { general } } = props;
 
   useEffect(() => {
     if (loader.loader && !loader.animation) gsapStart(action.setAnimationState(true));
@@ -86,10 +86,17 @@ const Welcome = (props) => {
             <li className='_smallBodyText' id='text-6'>{t("innovation")}</li>
           </ul>
           <section className='_intermediate'>
-            <div className='_target'>{welcomePage?.welcome?.subtitle}</div>
+            <div className='_target'>{page[page.currentPage][page.currentData].subtitle}</div>
             <div className='_targetRightContainer'>
-              <div className='_targetRight'>{welcomePage?.welcome?.secondSubtitle}</div>
-              <a href={welcomePage?.welcome?.recap?.link}><div className='_targetRight _targetDownload'>{welcomePage?.welcome?.recap?.title} <span className='_targetSpan'>*</span></div></a>
+              <div className='_targetRight'>{page[page.currentPage][page.currentData].secondSubtitle}</div>
+              <a href={page[page.currentPage][page.currentData].recap?.link}>
+                <div className={`_targetRight ${page[page.currentPage][page.currentData].recap ? '_targetDownload' : ''}`}>
+                  {(page[page.currentPage][page.currentData].recap) ?
+                    page[page.currentPage][page.currentData].recap.title :
+                    page[page.currentPage][page.currentData].year}
+                  {(page[page.currentPage][page.currentData].recap) ? <span className='_targetSpan'>*</span> : null}
+                </div>
+              </a>
             </div>
             <div className='_separator'></div>
           </section>
@@ -97,11 +104,11 @@ const Welcome = (props) => {
             <button className='_languageButton' onClick={changeLang} value={language} >
               {(language == 'en' ? 'Español' : 'English')}
             </button>
-            <div className='_contactText'>hello@bananadesign.io</div>
-            <div className='_contactText'>+58 424 187 2382</div>
-            <div className='_contactText'>+58 424 837 8858</div>
+            <div className='_contactText'>{general?.generals?.email}</div>
+            <div className='_contactText'>{general?.generals?.phoneOne}</div>
+            <div className='_contactText'>{general?.generals?.phoneTwo}</div>
             <p className='_moreInfo'>
-              {welcomePage?.welcome?.moreInfo}
+              {page[page.currentPage][page.currentData].moreInfo}
             </p>
           </section>
           <div className='_arrow' onClick={scrollToNextSection}>
@@ -109,10 +116,10 @@ const Welcome = (props) => {
           </div>
           <section className='_description'>
             <div className='_descriptionText'>
-              {welcomePage?.welcome?.content}
+              {page[page.currentPage][page.currentData].content}
             </div>
             <div className='_descriptionTextRigth'>
-              <div className='_contactRightText'>@_bananacreative</div>
+              <div className='_contactRightText'>{general?.generals?.insta}</div>
             </div>
           </section>
         </div>
@@ -350,7 +357,7 @@ const Welcome = (props) => {
   );
 }
 
-const mapStateToProps = ({ loader, menu, toggle, page }) => ({ loader, menu, toggle, page });
+const mapStateToProps = ({ loader, menu, toggle, page, resource }) => ({ loader, menu, toggle, page, resource });
 
 const mapDispatchToProps = dispatch => {
   const actions = {

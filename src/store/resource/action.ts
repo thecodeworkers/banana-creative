@@ -10,6 +10,7 @@ export const getResources: any = () => async (dispatch, getState) => {
   const result: any = await pages('welcomePage', language)
   page['welcomePage'] = result;
   page.currentPage = 'welcomePage';
+  page.currentData = 'welcome';
   dispatch(actionObject(SET_RESOURCES, allResources))
   dispatch(actionObject(GET_PAGES, page))
 }
