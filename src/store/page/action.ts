@@ -8,12 +8,14 @@ const setResources = (data, page, resources) => {
   return data;
 }
 
-export const getPages: any = (resources) => async (dispatch, getState) => {
-
-  const result: any = await pages(resources)
+export const getPages: any = (resources, dataQuery) => async (dispatch, getState) => {
+  const { resource: { language } } = getState()
+  const result: any = await pages(resources, language)
   const { page } = getState()
   let data = page
 
   data = setResources(data, result, resources);
+  data.currentPage = resources
+  data.currentData = dataQuery
   dispatch(actionObject(GET_PAGES, data))
 }

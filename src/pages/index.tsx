@@ -1,7 +1,8 @@
+import { wrapper } from '@store';
+import { getResources } from '@store/actions';
 import { Loader, Home } from '../components';
 
 const HomePage = () => {
-  
   return (
     <Loader>
       <Home />
@@ -9,5 +10,8 @@ const HomePage = () => {
   )
 }
 
+export const getServerSideProps = wrapper.getServerSideProps(
+  ({ store }) => store.dispatch(getResources())
+)
 
 export default HomePage

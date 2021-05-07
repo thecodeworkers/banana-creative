@@ -2,7 +2,9 @@ import { AnyAction } from 'redux'
 import { GET_PAGES } from './action-types'
 
 const initialState = {
-  homePage: {}
+  currentPage: '',
+  currentData: '',
+  welcomePage: {}
 }
 
 const pageReducer = (state = initialState, { type, payload }: AnyAction) => {

@@ -5,6 +5,7 @@ import menuReducer from './menu/reducer';
 import loaderReducer from './loader/reducer';
 import breadcrumbReducer from './breadcrumb/reducer';
 import pageReducer from './page/reducer'
+import resource from './resource/reducer'
 
 const reducers = combineReducers({
 	toggle: toggleReducer,
@@ -12,7 +13,8 @@ const reducers = combineReducers({
 	menu: menuReducer,
 	loader: loaderReducer,
 	breadcrumb: breadcrumbReducer,
-	page: pageReducer
+	page: pageReducer,
+  resource
 })
 
 export default reducers;
