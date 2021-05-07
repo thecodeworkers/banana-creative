@@ -19,112 +19,106 @@ const white = '#FFFFFF'
 
 const Welcome = (props) => {
 
-	const { i18n } = useTranslation();
-	const [language, setLanguage] = useState('en');
-	const { loader, menu, t, action, title, toggle, component } = props;
+  const { i18n } = useTranslation();
+  const [language, setLanguage] = useState('en');
+  const { loader, menu, t, action, title, toggle, component, page: { welcomePage } } = props;
 
-	useEffect(() => {
-		if (loader.loader && !loader.animation) gsapStart(action.setAnimationState(true));
-	}, [loader]);
+  useEffect(() => {
+    if (loader.loader && !loader.animation) gsapStart(action.setAnimationState(true));
+  }, [loader]);
 
-	useEffect(() => {
-		if (loader.loader) {
-			if (!menu.opened && toggle.toggle == 3) return;
-			menu.opened ? gsapRetract() : gsapExpand(toggleDispatch);
-		}
-	}, [menu]);
+  useEffect(() => {
+    if (loader.loader) {
+      if (!menu.opened && toggle.toggle == 3) return;
+      menu.opened ? gsapRetract() : gsapExpand(toggleDispatch);
+    }
+  }, [menu]);
 
-	const toggleDispatch = () => action.changeToggle(2)
+  const toggleDispatch = () => action.changeToggle(2)
 
-	const scrollToNextSection = () => {
-		var i = 10;
-		var int = setInterval(function () {
-			window.scrollTo(0, i);
-			i += 10;
-			if (i >= document.documentElement.clientHeight) clearInterval(int);
-		}, 20);
-	}
+  const scrollToNextSection = () => {
+    var i = 10;
+    var int = setInterval(function () {
+      window.scrollTo(0, i);
+      i += 10;
+      if (i >= document.documentElement.clientHeight) clearInterval(int);
+    }, 20);
+  }
 
-	const changeLang = async (event: any) => {
-		const lang = event.target.value;
-		let text = '';
-		if (lang == 'en') {
-			setLanguage('es');
-			text = 'es';
-		}
+  const changeLang = async (event: any) => {
+    const lang = event.target.value;
+    let text = '';
+    if (lang == 'en') {
+      setLanguage('es');
+      text = 'es';
+    }
 
-		if (lang == 'es') {
-			setLanguage('en');
-			text = 'en';
-		}
-    
+    if (lang == 'es') {
+      setLanguage('en');
+      text = 'en';
+    }
+
     await action.changeLanguage(lang.toUpperCase())
 
-		i18n.changeLanguage(text);
-	}
+    i18n.changeLanguage(text);
+  }
 
-	return (
-		<>
-			<div className={styles._principalContainer}>
-				<div className={styles._container}>
-					<section className='_concept'>
-						{/* <div className='_whiteBodyText' id='one'> {t("concept&purpose")} </div>
+  return (
+    <>
+      <div className={styles._principalContainer}>
+        <div className={styles._container}>
+          <section className='_concept'>
+            {/* <div className='_whiteBodyText' id='one'> {t("concept&purpose")} </div>
 					<div className='_whiteBodyText' id='two'> {t("beauty&function")} </div> */}
-						{
-							component
-								? <div className={styles._logoParentWelcome} id='three'>{title}</div>
-								: <div className='_whiteBodyText' id='three'> {t(title)} </div>
-						}
+            {
+              component
+                ? <div className={styles._logoParentWelcome} id='three'>{title}</div>
+                : <div className='_whiteBodyText' id='three'> {t(title)} </div>
+            }
 
-					</section>
-					<ul className={styles._list} id='list'>
-						<li className='_smallBodyText' id='text-3'>{t("beauty")}</li>
-						<li className='_smallBodyText' id='text-4'>{t("function")}</li>
-						<li className='_smallBodyText' id='text-5'>{t("creation")}</li>
-						<li className='_smallBodyText' id='text-1'>{t("concept")} </li>
-						<li className='_smallBodyText' id='text-2'>{t("purpose")}</li>
-						<li className='_smallBodyText' id='text-6'>{t("innovation")}</li>
-					</ul>
-					<section className='_intermediate'>
-						<div className='_target'>BRAND | UI - UX | MOTION GRAPHICS & 3D | SOCIAL MEDIA | PRODUCTIONS | PROTOTYPE | CLASSROOM </div>
-						<div className='_targetRightContainer'>
-							<div className='_targetRight'>It’s about purpose</div>
-							<div className='_targetRight'>est. 17’</div>
-						</div>
-						<div className='_separator'></div>
-					</section>
-					<section className='_contact'>
-						<button className='_languageButton' onClick={changeLang} value={language} >
-							{(language == 'en' ? 'Español' : 'English')}
-						</button>
-						<div className='_contactText'>hello@bananadesign.io</div>
-						<div className='_contactText'>+58 424 187 2382</div>
-						<div className='_contactText'>+58 424 837 8858</div>
-						<p className='_moreInfo'>
-						Somos un estudio creativo enfocado en ofrecer soluciones de diseño a nivel de Branding, Diseño Web, Modelado 3Dy Social Media. Trabajamos con innovadores que buscan
-						mejorar el mundo a través de sus ideas y servicios.
-					</p>
-					</section>
-					<div className='_arrow' onClick={scrollToNextSection}>
-						<Arrow />
-					</div>
-					<section className='_description'>
-						<div className='_descriptionText'>
-							Estudio creativo centrado en el diseño de nuevos lenguajes visuales para
-							marcas mundiales modernas, nuevas empresas y personas innovadoras
-							en todas partes. Nuestro objetivo es crear proyectos hermosos,
-							significativos y atemporales que no se limiten a simples modas.
+          </section>
+          <ul className={styles._list} id='list'>
+            <li className='_smallBodyText' id='text-3'>{t("beauty")}</li>
+            <li className='_smallBodyText' id='text-4'>{t("function")}</li>
+            <li className='_smallBodyText' id='text-5'>{t("creation")}</li>
+            <li className='_smallBodyText' id='text-1'>{t("concept")} </li>
+            <li className='_smallBodyText' id='text-2'>{t("purpose")}</li>
+            <li className='_smallBodyText' id='text-6'>{t("innovation")}</li>
+          </ul>
+          <section className='_intermediate'>
+            <div className='_target'>{welcomePage?.welcome?.subtitle}</div>
+            <div className='_targetRightContainer'>
+              <div className='_targetRight'>{welcomePage?.welcome?.secondSubtitle}</div>
+              <div className='_targetRight'>{welcomePage?.welcome?.year}</div>
+            </div>
+            <div className='_separator'></div>
+          </section>
+          <section className='_contact'>
+            <button className='_languageButton' onClick={changeLang} value={language} >
+              {(language == 'en' ? 'Español' : 'English')}
+            </button>
+            <div className='_contactText'>hello@bananadesign.io</div>
+            <div className='_contactText'>+58 424 187 2382</div>
+            <div className='_contactText'>+58 424 837 8858</div>
+            <p className='_moreInfo'>
+              {welcomePage?.welcome?.moreInfo}
+            </p>
+          </section>
+          <div className='_arrow' onClick={scrollToNextSection}>
+            <Arrow />
           </div>
-						<div className='_descriptionTextRigth'>
-							<div className='_contactRightText'>@_bananacreative</div>
-						</div>
+          <section className='_description'>
+            <div className='_descriptionText'>
+              {welcomePage?.welcome?.content}
+            </div>
+            <div className='_descriptionTextRigth'>
+              <div className='_contactRightText'>@_bananacreative</div>
+            </div>
+          </section>
+        </div>
+      </div>
 
-
-					</section>
-				</div>
-			</div>
-
-			<style jsx> {`
+      <style jsx> {`
 			._description {
 			background-color: #FFFFFF;
 			width: 50%;
@@ -336,23 +330,23 @@ const Welcome = (props) => {
 				font-size: 2.2rem !important;
 			}
 		}`
-			}</style>
-		</>
-	);
+      }</style>
+    </>
+  );
 }
 
-const mapStateToProps = ({ loader, menu, toggle }) => ({ loader, menu, toggle });
+const mapStateToProps = ({ loader, menu, toggle, page }) => ({ loader, menu, toggle, page });
 
 const mapDispatchToProps = dispatch => {
-	const actions = {
-		changeToggle,
-		setAnimationState,
+  const actions = {
+    changeToggle,
+    setAnimationState,
     changeLanguage
-	}
+  }
 
-	return {
-		action: bindActionCreators(actions, dispatch)
-	}
+  return {
+    action: bindActionCreators(actions, dispatch)
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(withTrans(Welcome));

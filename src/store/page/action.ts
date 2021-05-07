@@ -9,11 +9,12 @@ const setResources = (data, page, resources) => {
 }
 
 export const getPages: any = (resources) => async (dispatch, getState) => {
-
-  const result: any = await pages(resources)
+  const { resource: { language } } = getState()
+  const result: any = await pages(resources, language)
   const { page } = getState()
   let data = page
 
   data = setResources(data, result, resources);
+  data.currentPage = resources
   dispatch(actionObject(GET_PAGES, data))
 }

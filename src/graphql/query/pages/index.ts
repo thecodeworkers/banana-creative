@@ -1,10 +1,10 @@
 import { GraphQlClient, normalized } from '@utils'
-import homePageQuery from './homePage'
+import welcomePageQuery from './welcomePage'
 
-const pages = async (resource: any) => {
+const pages = async (resource: any, language) => {
 
   const resources = {
-    'homePage': homePageQuery,
+    'welcomePage': welcomePageQuery(language),
   }
 
   const query = `
@@ -13,8 +13,10 @@ const pages = async (resource: any) => {
     }
   `
   const result: any = await GraphQlClient(query)
-  
-  return (result) ? 'nodes' in result[resource] ? normalized(result[resource].nodes) : normalized(result[resource]) : {}
+
+  const data = ('translation' in result[resource]) ? result[resource].translation : result[resource]
+
+  return (result) ? 'nodes' in result[resource] ? normalized(result[resource].nodes) : normalized(data) : {}
 }
 
 export default pages
