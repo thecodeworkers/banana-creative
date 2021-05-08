@@ -14,7 +14,8 @@ i18next.init({
     ns: ['translations'],
     defaultNS: 'translations',
     returnObjects: true,
-    debug: process.env.NODE_ENV === 'development',
+    // debug: process.env.NODE_ENV === 'development',
+    debug: false,
     interpolation: {
       escapeValue: false, // not needed for react!!
     },

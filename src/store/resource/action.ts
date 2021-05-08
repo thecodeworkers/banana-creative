@@ -3,14 +3,14 @@ import { actionObject } from '../../utils'
 import { pages, resources } from '../../graphql/query'
 import { GET_PAGES } from '@store/page/action-types'
 
-
-export const getResources: any = () => async (dispatch, getState) => {
+export const getResources: any = () => async (dispatch, getState) => {  
   const { resource: { language }, page } = getState()
   const allResources = await resources(language)
   const result: any = await pages('welcomePage', language)
   page['welcomePage'] = result;
   page.currentPage = 'welcomePage';
   page.currentData = 'welcome';
+
   dispatch(actionObject(SET_RESOURCES, allResources))
   dispatch(actionObject(GET_PAGES, page))
 }

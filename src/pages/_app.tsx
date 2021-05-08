@@ -1,10 +1,16 @@
-import withRedux from 'next-redux-wrapper';
+import { useEffect } from 'react'
 import { wrapper } from '../store';
-import { Provider } from 'react-redux';
+import { useStore } from 'react-redux'
 import Head from 'next/head';
 import '../../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
+  const store: any = useStore()
+
+  useEffect(() => {
+    store.__persistor.persist()
+  }, [])
+
   return (
     <>
       <Head>

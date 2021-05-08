@@ -1,8 +1,9 @@
 import { createStore, applyMiddleware } from 'redux'
 import { HYDRATE, createWrapper } from 'next-redux-wrapper'
+import createWebStorage from 'redux-persist/lib/storage/createWebStorage'
 import thunkMiddleware from 'redux-thunk'
 import reducers from './reducers'
-import createWebStorage from 'redux-persist/lib/storage/createWebStorage'
+import reconcile from './reconcile'
 
 const createNoopStorage = () => {
   return {
@@ -28,8 +29,10 @@ const bindMiddleware = (middleware) => {
 }
 
 const reducer = (state, action) => {
-  if (action.type === HYDRATE) return { ...state, ...action.payload }
-  if (action.type == 'persist/REHYDRATE') action.payload = { ...action.payload, ...state }
+  let reconcileState = {}
+
+  if (action.type == '__NEXT_REDUX_WRAPPER_HYDRATE__') reconcileState = reconcile(state)
+  if (action.type === HYDRATE) return { ...state, ...action.payload, ...reconcileState }
 
   return reducers(state, action)
 }
@@ -42,9 +45,8 @@ const makeStore: any = ({ isServer }) => {
   const storage = typeof window !== "undefined" ? createWebStorage("local") : createNoopStorage()
 
   const persistConfig = {
-    key: 'cryptobuyerRoot',
-    storage,
-    // whitelist: ['loader']
+    key: 'bananaRoot',
+    storage
   }
 
   const persistedReducer = persistReducer(persistConfig, reducer)
