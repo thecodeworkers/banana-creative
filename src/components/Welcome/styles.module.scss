@@ -51,3 +51,7 @@ $bottomMoreInfoPosition: 15%;
 	@include background();
 	visibility: hidden;
 }
+
+._downloadLink {
+  width: 40%;
+}
