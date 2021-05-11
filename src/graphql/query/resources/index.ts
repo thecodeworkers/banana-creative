@@ -1,15 +1,19 @@
-import { GraphQlClient, normalizedArray } from '@utils'
+import { GraphQlClient, normalized, normalizedArray } from '@utils'
+import generalQuery from './generalPage'
 
-const resource = async () => {
-
+const resource = async (language) => {
   const query = `
     query Resources {
+      ${generalQuery(language)}
     }
   `
-  const data: any = await GraphQlClient(query)
 
-  const resources = {}
+  const data: any = await GraphQlClient(query)
   
+  const resources = {
+    general: normalized(data?.generalPage?.translation)
+  }
+
   return resources
 }
 
