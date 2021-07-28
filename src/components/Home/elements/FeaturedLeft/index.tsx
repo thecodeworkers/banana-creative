@@ -33,7 +33,7 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 		 const timeline = gsap.timeline();
 			timeline.play()
 
-			// .to('._circle', 0.6, { width: '0px', height: '0px'}, 0.1)
+			.to('._circle', 0.6, { width: '0px', height: '0px'}, 0.1)
 			.to(['._text', '._circle'], 0.3, { css: { scale: 0 }})
 		 }
 
@@ -42,7 +42,7 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 		 const timeline = gsap.timeline();
 			timeline.play()
 			
-			// .to('._circle', 0.6, { width: '90px', height: '90px' }, 0.1)
+			.to('._circle', 0.6, { width: '90px', height: '90px' }, 0.1)
 			.to(['._text', '._circle'], 0.6, { css: { scale: 1}})
 		 }
 
