@@ -4,10 +4,10 @@ import styles from './styles.module.scss';
 
 const Gallery = () => {
 
-	const team = teamData;
-	const [image, setImage] = useState(null);
+	const team = teamData
+	const [image, setImage] = useState(null)
 
-	const imageChange = (index) => image == index ? setImage(null) : setImage(index);
+	const imageChange = (index) => image == index ? setImage(null) : setImage(index)
 
 	return (
 		<>
