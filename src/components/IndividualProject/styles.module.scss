@@ -1,0 +1,33 @@
+@import '@styles/index.scss';
+
+._scrollingWrapper {
+  // overflow-x: scroll;
+  // overflow-y: hidden;
+  // white-space: nowrap;
+  // position: absolute;
+  // top: 0px;
+  // width:100%;
+  width: 300%;
+  display: flex;
+}
+
+._cardCarrousel{
+  display: inline-table;
+  width: 100%;
+}
+
+._scrollingWrapper {
+  scrollbar-width: none; 
+}
+
+
+._scrollingWrapper::-webkit-scrollbar {
+  display: none; 
+}
+
+._transition {
+  animation: trans 0.6s forwards;
+  -webkit-trans : 0.6s fordwards;
+  -moz-trans : 0.6s fordwards;
+  -o-trans :0.6s fordwards;
+}

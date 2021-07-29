@@ -9,3 +9,4 @@ export { default as AboutUs } from './AboutUs';
 export { default as Home } from './Home';
 export { default as Featureds } from './Home/elements/Featureds';
 export { default as Portfolio } from './Portfolio';
+export { default as IndividualProject } from './IndividualProject';

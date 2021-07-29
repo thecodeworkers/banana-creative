@@ -1,11 +1,11 @@
 import { wrapper } from '@store';
 import { getResources } from '@store/actions';
-import { Loader, Home } from '../components';
+import { Loader, IndividualProject } from '../components';
 
-const HomePage = () => {
+const IndividualProjectPage = () => {
   return (
     <Loader>
-      <Home />
+      <IndividualProject content={''} />
     </Loader>
   )
 }
@@ -14,4 +14,4 @@ const HomePage = () => {
 //   ({ store }) => store.dispatch(getResources())
 // )
 
-export default HomePage
+export default IndividualProjectPage

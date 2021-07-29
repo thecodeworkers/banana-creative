@@ -16,5 +16,6 @@ export const getPages: any = (resources) => async (dispatch, getState) => {
 
   data = setResources(data, result, resources);
   data.currentPage = resources
+  
   dispatch(actionObject(GET_PAGES, data))
 }
