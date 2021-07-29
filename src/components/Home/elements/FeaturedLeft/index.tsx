@@ -6,13 +6,13 @@ import { changeBreadcrumb, setTheme } from '@store/actions';
 import { propsType } from './interface';
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
+import { useRouter } from 'next/router';
 const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subtitle, image, action, transition = false, id, theme }) => {
 
 	gsap.registerPlugin(ScrollTrigger);
 
 	const [ currentImage, setCurrentImage ] = useState(image)
-
+  const router = useRouter();
 	const [ xPosition, setXPosition] = useState(0)
 	const [ yPosition, setYPosition] = useState(0)
 	const [ showCircle, setShowCircle ] = useState(false)
@@ -130,8 +130,12 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 
 	const circleStatus = () => {
 		setShowCircle(showCircle => !showCircle)
-
 	}
+
+  const navigation = (route) => {
+    router.push(route);
+    action.setTheme(true);
+  }
 
 	return (
 		<div className='_principal' id={id}>
@@ -145,7 +149,7 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 					</div>
 						</div>
 				
-						<div className={styles._imageDad} onMouseEnter={circleStatus} onMouseLeave={circleStatus}>
+						<div className={styles._imageDad} onMouseEnter={circleStatus} onMouseLeave={circleStatus} onClick={() => navigation('individual-project')}>
 							<img src={currentImage} width='100%'></img>
 							<div className={styles._keywordsTwo}>
 								<p className={styles._caseOfStudyTwo}> {imageDescription} </p>

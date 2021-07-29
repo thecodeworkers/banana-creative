@@ -1,0 +1,34 @@
+@import '@styles/index.scss';
+
+ 
+._leftDivFeatured {
+    width: 60%;
+    position: relative;
+    overflow: hidden;
+}
+
+ 
+._rightDivContent {
+  width: 40%;
+  padding-left: 2.5%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+._parent {
+  display: inline-flex;
+  width: 100%;
+}
+ 
+
+._imageDad {
+  height: 80vh;
+}
+
+			
+._imgLeft {
+  width:60%;
+  height:65%
+}

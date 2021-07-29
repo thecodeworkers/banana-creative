@@ -5,7 +5,7 @@ import { GET_PAGES } from '@store/page/action-types'
 
 
 export const getResources: any = () => async (dispatch, getState) => {
-  const { resource: { language }, page } = getState()
+  const { resource: { language }, page } = getState() 
   const allResources = await resources(language)
   const result: any = await pages('welcomePage', language)
   page['welcomePage'] = result;
