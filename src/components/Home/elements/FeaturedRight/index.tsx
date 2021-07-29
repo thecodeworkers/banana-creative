@@ -1,9 +1,5 @@
 import React, { useEffect } from 'react';
 import styles from './styles.module.scss';
-import { Ai } from '@images/svg';
-import { changeBreadcrumb, setTheme } from '@store/actions';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { propsType } from './types';
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -136,18 +132,4 @@ const FeaturedRight = (props: propsType) => {
 	)
 }
 
-const mapStateToProps = ({ breadcrumb, theme }) => ({ breadcrumb, theme });
-
-const mapDispatchToProps = dispatch => {
-	const actions = {
-		changeBreadcrumb,
-		setTheme
-	}
-
-	return {
-		action: bindActionCreators(actions, dispatch)
-	}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(FeaturedRight);
-
+export default FeaturedRight

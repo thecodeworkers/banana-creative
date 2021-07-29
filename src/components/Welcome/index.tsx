@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { withTrans } from '../../i18n/withTrans';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { useSelector, useDispatch } from 'react-redux'
 
 const gray = '#929497';
 const pureBlack = '#000000';
@@ -19,12 +20,15 @@ const white = '#FFFFFF'
 
 const Welcome = (props) => {
 
+  const dispatch = useDispatch()
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState('en');
-  const { loader, menu, t, action, title, toggle, component, page: { welcomePage } } = props;
+  const { t, title, component  } = props;
+
+  const { loader, menu, toggle, page: { welcomePage } } = useSelector((state: any) => state)
 
   useEffect(() => {
-    if (loader.loader && !loader.animation) gsapStart(action.setAnimationState(true));
+    if (loader.loader && !loader.animation) gsapStart(dispatch(setAnimationState(true)));
   }, [loader]);
 
   useEffect(() => {
@@ -34,7 +38,7 @@ const Welcome = (props) => {
     }
   }, [menu]);
 
-  const toggleDispatch = () => action.changeToggle(2)
+  const toggleDispatch = () => dispatch(changeToggle(2))
 
   const scrollToNextSection = () => {
     var i = 10;
@@ -58,7 +62,7 @@ const Welcome = (props) => {
       text = 'en';
     }
 
-    await action.changeLanguage(lang.toUpperCase())
+    await dispatch(changeLanguage(lang.toUpperCase()))
 
     i18n.changeLanguage(text);
   }
@@ -352,18 +356,4 @@ const Welcome = (props) => {
   );
 }
 
-const mapStateToProps = ({ loader, menu, toggle, page }) => ({ loader, menu, toggle, page });
-
-const mapDispatchToProps = dispatch => {
-  const actions = {
-    changeToggle,
-    setAnimationState,
-    changeLanguage
-  }
-
-  return {
-    action: bindActionCreators(actions, dispatch)
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(withTrans(Welcome));
+export default withTrans(Welcome)

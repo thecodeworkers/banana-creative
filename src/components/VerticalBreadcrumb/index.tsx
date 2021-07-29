@@ -4,10 +4,13 @@ import verticalBreadcrumbProps from './interface';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { gsap } from 'gsap';
+import { useSelector } from 'react-redux'
 
-const VerticalBreadcrumb: React.FC<verticalBreadcrumbProps> = ({ breadcrumb }) => {
+const VerticalBreadcrumb: React.FC<verticalBreadcrumbProps> = () => {
 
-	const { text, color } = breadcrumb;
+  const { breadcrumb } = useSelector((state: any) => state)
+  const { text, color } = breadcrumb;
+
 	const tl = gsap.timeline();
 
 	const blue = '#0853DC'
@@ -16,7 +19,6 @@ const VerticalBreadcrumb: React.FC<verticalBreadcrumbProps> = ({ breadcrumb }) =
 	useEffect(() => {
 		tl.play();
 		tl.to('._breadCrumbtext', 1, { color: color });
-
 	}, [breadcrumb])
 
 	return (
@@ -46,15 +48,4 @@ const VerticalBreadcrumb: React.FC<verticalBreadcrumbProps> = ({ breadcrumb }) =
 	)
 }
 
-const mapStateToProps = ({ breadcrumb }) => ({ breadcrumb });
-
-const mapDispatchToProps = dispatch => {
-	const actions = {
-	}
-
-	return {
-		action: bindActionCreators(actions, dispatch)
-	}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(VerticalBreadcrumb);
+export default VerticalBreadcrumb

@@ -6,10 +6,14 @@ import { setLoader } from '@store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Props } from './type';
+import { useSelector, useDispatch } from 'react-redux'
 
-const Loader = ({ children, loader, action }: Props) => {
+const Loader = ({ children }: Props) => {
 
 	const animationContainer: any = createRef();
+
+  const dispatch = useDispatch();
+  const { loader } = useSelector(state => state);
 
 	const [show, setShow] = useState(false);
 	const [loaderClass, setloaderClass] = useState(styles._showLoader);
@@ -34,7 +38,7 @@ const Loader = ({ children, loader, action }: Props) => {
 	const showContent = () => {
 		setShow(true);
 		setloaderClass(styles._hiddenLoader);
-		action.setLoader(true);
+		dispatch(setLoader(true))
 	}
 
 	return (
@@ -49,18 +53,6 @@ const Loader = ({ children, loader, action }: Props) => {
 	)
 }
 
-const mapStateToProps = ({ loader }) => ({ loader });
-
-const mapDispatchToProps = dispatch => {
-	const actions = {
-		setLoader
-	}
-
-	return {
-		action: bindActionCreators(actions, dispatch)
-	}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Loader);
+export default Loader;
 
 

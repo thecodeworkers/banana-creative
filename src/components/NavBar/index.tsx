@@ -3,24 +3,26 @@ import { Logo, ToggleButton, BananaLogo } from '@images/components';
 import navBarProps from './interface';
 import { gsapMenuStart } from '../Menu/gsap';
 import styles from './styles.module.scss';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { unfoldMenu, changeToggle } from '@store/actions';
 import { gsap } from 'gsap';
 import { useRouter } from 'next/router';
+import { useSelector, useDispatch } from 'react-redux'
 
 const NavBar: React.FC<navBarProps> = (props) => {
 
 	const router = useRouter();
+  const dispatch = useDispatch();
 
-	const { reference, action, toggle, theme, colorChange } = props;
+	const { reference, colorChange } = props;
 	const [isDark, setIsDark] = useState(false);
 	// const timeline = gsap.timeline();
+
+  const { theme, toggle } = useSelector((state:any) => state)
 
 	const openMenu = () => {
 		intToggle();
 		gsapMenuStart();
-		action.unfoldMenu(true);
+		dispatch(unfoldMenu(true))
 	}
 
 	useEffect(() => {
@@ -53,8 +55,8 @@ const NavBar: React.FC<navBarProps> = (props) => {
 
 	const navigateToHome = () => {
 		if (router.pathname != '/') router.push('/');
-		action.unfoldMenu(false);
-		action.changeToggle(3);
+		dispatch(unfoldMenu(false))
+		dispatch(changeToggle(3))
 	};
 
 	return (
@@ -88,17 +90,4 @@ const NavBar: React.FC<navBarProps> = (props) => {
 	)
 }
 
-const mapStateToProps = ({ menu, toggle, theme }) => ({ menu, toggle, theme });
-
-const mapDispatchToProps = dispatch => {
-	const actions = {
-		unfoldMenu,
-		changeToggle
-	}
-
-	return {
-		action: bindActionCreators(actions, dispatch)
-	}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default NavBar;

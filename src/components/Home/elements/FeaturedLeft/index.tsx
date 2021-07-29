@@ -6,10 +6,15 @@ import { changeBreadcrumb, setTheme } from '@store/actions';
 import { propsType } from './interface';
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useSelector, useDispatch  } from 'react-redux'
 
-const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subtitle, image, action, transition = false, id, theme }) => {
+const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subtitle, image, transition = false, id }) => {
 
-	gsap.registerPlugin(ScrollTrigger);
+	gsap.registerPlugin(ScrollTrigger)
+
+  const dispatch = useDispatch()
+
+  const { breadcrumb, theme } = useSelector(state => state)
 
 	const [ currentImage, setCurrentImage ] = useState(image)
 
@@ -74,13 +79,13 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 
 		inAnimation(false)
 		if (transition) {
-			action.setTheme(true);
+			dispatch(setTheme(true))
 			tl.to(['._principal', '._featuredTwoChild'], { backgroundColor: '#2C292A' });
 			setTimeout(() => {
-				action.changeBreadcrumb({
+				dispatch(changeBreadcrumb({
 					color: '#FFFFFF',
 					text: 'Destacados',
-				});
+				}));
 			}, 200);
 		}
 	}
@@ -89,15 +94,15 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 
 		inAnimation(true);
 		if (transition) {
-			action.setTheme(false);
+			dispatch(setTheme(false))
 
 			tl.to(['._principal', '._featuredTwoChild'], { backgroundColor: '#FFFFFF' });
 
 			setTimeout(() => {
-				action.changeBreadcrumb({
+				dispatch(changeBreadcrumb({
 					color: '#000000',
 					text: 'Welcome',
-				});
+				}));
 			}, 200);
 		}
 	}
@@ -271,17 +276,4 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 	)
 }
 
-const mapStateToProps = ({ breadcrumb, theme }) => ({ breadcrumb, theme });
-
-const mapDispatchToProps = dispatch => {
-	const actions = {
-		changeBreadcrumb,
-		setTheme
-	}
-
-	return {
-		action: bindActionCreators(actions, dispatch)
-	}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(FeaturedTwo);
+export default FeaturedTwo;
