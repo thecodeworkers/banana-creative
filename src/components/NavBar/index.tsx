@@ -8,12 +8,11 @@ import { gsap } from 'gsap';
 import { useRouter } from 'next/router';
 import { useSelector, useDispatch } from 'react-redux'
 
-const NavBar: React.FC<navBarProps> = (props) => {
+const NavBar: React.FC<navBarProps> = ({ reference, colorChange }) => {
 
 	const router = useRouter();
   const dispatch = useDispatch();
 
-	const { reference, colorChange } = props;
 	const [isDark, setIsDark] = useState(false);
 	// const timeline = gsap.timeline();
 
