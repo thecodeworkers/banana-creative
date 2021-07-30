@@ -8,14 +8,15 @@ import { connect } from 'react-redux';
 import { unfoldMenu, changeToggle } from '@store/actions';
 import { gsap } from 'gsap';
 import { useRouter } from 'next/router';
+import { parseHour, caracasParseHour } from '@utils';
 
 const NavBar: React.FC<navBarProps> = (props) => {
-
+  
 	const router = useRouter();
 
 	const { reference, action, toggle, theme, colorChange } = props;
 	const [isDark, setIsDark] = useState(false);
-	// const timeline = gsap.timeline();
+  const [ currentHour, setCurrentHour ] = useState(caracasParseHour())
 
 	const openMenu = () => {
 		intToggle();
@@ -57,6 +58,20 @@ const NavBar: React.FC<navBarProps> = (props) => {
 		action.changeToggle(3);
 	};
 
+  useEffect(() => {
+    let interval = setInterval(getCurrentHour, 1000);
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const getCurrentHour = () => {
+    const date = new Date();
+    const timeZone =  date.toLocaleString('en-US', { timeZone: 'America/Caracas' })
+    const caracasDate = new Date(timeZone)
+    const parseDate = parseHour(caracasDate)
+    setCurrentHour(parseDate)
+  }
+
 	return (
 		<div className={`${styles._navBar} ${theme.theme && colorChange ? styles._dark : styles._ligth}`}>
 			<div className={styles._rightContainer} >
@@ -77,7 +92,7 @@ const NavBar: React.FC<navBarProps> = (props) => {
 				<div className={styles._timeContainer} >
 
 					<p className={styles._time}>Caracas</p>
-					<p className={styles._time}>3:34 PM</p>
+					<p className={styles._time}>{currentHour}</p>
 				</div>
 				<div className={styles._navBarToggleWrapper} onClick={outToggle}>
 					<ToggleButton className={styles._navBarToggle} />

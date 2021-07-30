@@ -10,5 +10,4 @@ export type propsType = {
 	theme: boolean,
 	transition?: boolean,
 	id?: string,
-
 }
