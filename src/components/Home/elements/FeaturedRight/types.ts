@@ -10,7 +10,7 @@ export type propsType = {
 	descriptionThree?: string,
 	descriptionFour?: string,
 	image?: any,
-	action: () => {},
+	action?: () => {},
 	theme?: boolean,
 	transition?: boolean,
 	id?: string
