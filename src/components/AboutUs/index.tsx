@@ -6,7 +6,7 @@ const AboutUs = ({content}) => {
   return (
     <div >
       <NavBar colorChange={false} />
-      <Menu />
+      <Menu  />
       <Welcome title='About us' component={false} />
       <Gallery />
       <Footer />

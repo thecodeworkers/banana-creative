@@ -2,17 +2,18 @@ import React, { useEffect } from 'react';
 import { ToggleButton } from '@images/components';
 import { gsapMenuStart, gsapMenuEnd } from './gsap'
 import styles from './styles.module.scss';
-import { bindActionCreators } from "redux";
-import { connect } from 'react-redux';
 import { unfoldMenu, changeToggle } from '@store/actions';
 import menuProps from './interface';
 import { useRouter } from 'next/router';
+import { useSelector, useDispatch } from 'react-redux'
 
 const Menu: React.FC<menuProps> = (props) => {
 
-  const { menu, action, reference, resource: { general } } = props;
-
+  const { reference } = props;
+  const dispatch = useDispatch()
   const router = useRouter();
+
+  const { resource: { general }, menu } = useSelector((state: any) => state)
 
   const white = '#FFFFFF'
   const helvetica = 'HelveticaNeue';
@@ -24,14 +25,14 @@ const Menu: React.FC<menuProps> = (props) => {
 
   const closeMenu = () => {
     gsapMenuEnd();
-    action.unfoldMenu(false);
-    action.changeToggle(1);
+    dispatch(unfoldMenu(false))
+    dispatch(changeToggle(1))
   }
 
   const navigation = (route) => {
     if (router.pathname != '/about-us') router.push('/about-us');
     closeMenu();
-    action.changeToggle(3);
+    dispatch(changeToggle(3))
 
   }
 
@@ -186,17 +187,4 @@ const Menu: React.FC<menuProps> = (props) => {
   )
 }
 
-const mapStateToProps = ({ menu, resource }) => ({ menu, resource });
-
-const mapDispatchToProps = dispatch => {
-  const actions = {
-    unfoldMenu,
-    changeToggle
-  }
-
-  return {
-    action: bindActionCreators(actions, dispatch)
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+export default Menu;

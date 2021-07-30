@@ -1,5 +1,5 @@
 export type Props = {
-	children: any,
-	loader: any,
-	action: any
+	children?: any,
+	loader?: any,
+	action?: any
 }
