@@ -13,7 +13,7 @@ const Loader = ({ children }: Props) => {
 	const animationContainer: any = createRef();
 
   const dispatch = useDispatch();
-  const { loader } = useSelector(state => state);
+  const { loader } = useSelector((state: any) => state);
 
 	const [show, setShow] = useState(false);
 	const [loaderClass, setloaderClass] = useState(styles._showLoader);

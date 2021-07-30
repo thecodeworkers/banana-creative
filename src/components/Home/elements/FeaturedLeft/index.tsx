@@ -6,7 +6,7 @@ import { changeBreadcrumb, setTheme } from '@store/actions';
 import { propsType } from './interface';
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useSelector, useDispatch  } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subtitle, image, transition = false, id }) => {
 
@@ -14,7 +14,7 @@ const FeaturedTwo = ({ otheimage, imageDescription, date, keywords, title, subti
 
   const dispatch = useDispatch()
 
-  const { breadcrumb, theme } = useSelector(state => state)
+  const { breadcrumb, theme } = useSelector((state: any) => state)
 
 	const [ currentImage, setCurrentImage ] = useState(image)
 
