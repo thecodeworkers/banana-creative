@@ -63,10 +63,19 @@
 ._timeContainer{
   padding-left: 15%;
   display: flex;
+
+  & p:first-child {
+    margin-right: 0.6rem;
+  }
 }
 
 ._time{
-  font-size: 0.75rem;
-  font-family: $helveticaMedium;
+  font-size: 0.8rem;
+  font-family: $helvetica;
   color: $pureBlack;
+}
+
+._timeDark {
+  @extend ._time;
+  color: $white;
 }

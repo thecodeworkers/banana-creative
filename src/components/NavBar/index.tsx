@@ -65,7 +65,7 @@ const NavBar: React.FC<navBarProps> = (props) => {
   }, [])
 
   const getCurrentHour = () => {
-    const date = new Date();
+    const date = new Date()
     const timeZone =  date.toLocaleString('en-US', { timeZone: 'America/Caracas' })
     const caracasDate = new Date(timeZone)
     const parseDate = parseHour(caracasDate)
@@ -80,7 +80,10 @@ const NavBar: React.FC<navBarProps> = (props) => {
 					{
 						!theme.theme
 							? <BananaLogo />
-							: <Logo firstColor={colorChange ? '#FFFFFF' : null} secondColor={colorChange ? '#FFFFFF' : null} />
+							: <Logo 
+                firstColor={colorChange ? '#FFFFFF' : null} 
+                secondColor={colorChange ? '#FFFFFF' : null} 
+                />
 					}
 
 				</div>
@@ -91,8 +94,8 @@ const NavBar: React.FC<navBarProps> = (props) => {
 			<div className={styles._leftContainer} >
 				<div className={styles._timeContainer} >
 
-					<p className={styles._time}>Caracas</p>
-					<p className={styles._time}>{currentHour}</p>
+					<p className={!theme.theme ? styles._time : styles._timeDark }>CARACAS</p>
+					<p className={!theme.theme ? styles._time : styles._timeDark }>{currentHour}</p>
 				</div>
 				<div className={styles._navBarToggleWrapper} onClick={outToggle}>
 					<ToggleButton className={styles._navBarToggle} />
