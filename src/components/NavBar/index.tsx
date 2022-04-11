@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Logo, ToggleButton } from './../../assets/img';
+import { Logo, ToggleButton, BananaLogo } from '@images/components';
 import navBarProps from './interface';
-import { gsapMenuStart } from '../../components/Menu/gsap';
+import { gsapMenuStart } from '../Menu/gsap';
 import styles from './styles.module.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { unfoldMenu, changeToggle } from '../../store/actions';
+import { unfoldMenu, changeToggle } from '@store/actions';
 import { gsap } from 'gsap';
 import { useRouter } from 'next/router';
 
@@ -14,7 +14,7 @@ const NavBar: React.FC<navBarProps> = (props) => {
 	const router = useRouter();
 
 	const { reference, action, toggle, theme, colorChange } = props;
-	const [ isDark, setIsDark ] = useState(false);
+	const [isDark, setIsDark] = useState(false);
 	// const timeline = gsap.timeline();
 
 	const openMenu = () => {
@@ -52,23 +52,37 @@ const NavBar: React.FC<navBarProps> = (props) => {
 	}
 
 	const navigateToHome = () => {
-		if(router.pathname != '/') router.push('/');
+		if (router.pathname != '/') router.push('/');
+		action.unfoldMenu(false);
 		action.changeToggle(3);
 	};
 
 	return (
 		<div className={`${styles._navBar} ${theme.theme && colorChange ? styles._dark : styles._ligth}`}>
-			<div className={styles._logoParent} onClick={navigateToHome}>
+			<div className={styles._rightContainer} >
+				<div className={styles._logoParent} onClick={navigateToHome}>
 
-				{
-					!theme.theme
-						? <Logo firstColor='#161616' secondColor='#231f20' />
-						: <Logo firstColor={colorChange ? '#FFFFFF' : null} secondColor={colorChange ? '#FFFFFF' : null} />
-				}
+					{
+						!theme.theme
+							? <BananaLogo />
+							: <Logo firstColor={colorChange ? '#FFFFFF' : null} secondColor={colorChange ? '#FFFFFF' : null} />
+					}
+
+				</div>
 
 			</div>
-			<div className={styles._navBarToggleWrapper} onClick={outToggle} >
-				<ToggleButton className={styles._navBarToggle} />
+
+
+			<div className={styles._leftContainer} >
+				<div className={styles._timeContainer} >
+
+					<p className={styles._time}>Caracas</p>
+					<p className={styles._time}>3:34 PM</p>
+				</div>
+				<div className={styles._navBarToggleWrapper} onClick={outToggle}>
+					<ToggleButton className={styles._navBarToggle} />
+				</div>
+
 			</div>
 		</div>
 	)

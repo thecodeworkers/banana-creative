@@ -33,3 +33,17 @@ p{
   font-family: "HelveticaNeueMedium";
   src: url('../public/fonts/Helvetica/HelveticaNeueLight.ttf');
 }
+@font-face {
+  font-family: "Helvetica";
+  src: url('../public/fonts/Helvetica/Helvetica.ttf');
+}
+
+@font-face {
+  font-family: "HelveticaBold";
+  src: url('../public/fonts/Helvetica/HelveticaBold.ttf');
+}
+
+@font-face {
+  font-family: "HelveticaMedium";
+  src: url('../public/fonts/Helvetica/HelveticaLight.ttf');
+}

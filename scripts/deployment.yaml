@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: banana-dev-web
+  namespace: banana
+  labels:
+    app: banana-dev-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: banana-dev-web
+  template:
+    metadata:
+      labels:
+        app: banana-dev-web
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+        - name: banana-dev-web
+          imagePullPolicy: Always
+          image: registry.thecodeworkers.com/banana-dev-web:latest
+          ports:
+            - name: http-port
+              containerPort: 3000

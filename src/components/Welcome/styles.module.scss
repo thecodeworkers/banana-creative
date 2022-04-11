@@ -1,0 +1,57 @@
+@import '../../../public/styles/index.scss';
+
+$textHeight: 0px;
+$bottomPosition: 50%;
+$bottomMoreInfoPosition: 15%;
+
+@mixin background {
+	background-color: #ffffff;
+}
+
+@mixin printHeight($prefix, $num) {
+	@for $i from 1 through $num {
+		#{$prefix}-#{$i} {
+			top: space();
+		}
+	}
+}
+
+@function space() {
+	$textHeight: $textHeight + 40px !global;
+	$top: $textHeight;
+
+	@return $top;
+}
+
+._principalContainer {
+  padding: 10vh 2.5% 5vh 2.5%;
+	height: 100vh;
+	@include background();
+}
+
+._container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+	flex-wrap: wrap;
+	@include background();
+	
+}
+
+._logoParentWelcome {
+	width: 40%;
+}
+
+._list {
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	top: 37%;
+	@include printHeight('#text', 6);
+	@include background();
+	visibility: hidden;
+}
+
+._downloadLink {
+  width: 40%;
+}

@@ -1,0 +1,88 @@
+@import '@styles/index.scss';
+
+@mixin text($bold, $size) {
+	font-size: $size;
+	color: $gray;
+	@if ($bold) {
+		font-weight: $bold;
+	}
+}
+
+._generalGallery { 
+  padding: 3% 0px 3% 0px;
+  width: 90%;
+	margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 2rem;
+}
+
+._teamPhoto {
+	width: 100%;
+	height: 50vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-position: center center;
+	position: relative;
+}
+
+._teamDescription {
+	box-sizing: border-box;
+	background-color: $opacityGray;
+	-webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+
+._teamList {
+	list-style: none;
+
+	& > li {
+		font-family: $helvetica;
+		color: #212121;
+	}
+}
+
+._teamName {
+	@include text(600, 0.9rem)
+}
+
+._teamPosition {
+	@include text('', 0.9rem)
+}
+
+._itemRow {
+	display: inline-flex;
+	@include text(600, 	1.15rem);
+}
+
+._circlesParent {
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+}
+
+
+@include responsive(lg) {
+  ._generalGallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+	._teamPhoto {
+		width: 100%
+	}
+}
+
+@include responsive(md) {
+  ._generalGallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+	._teamPhoto {
+		width: 100%;
+	}
+}
+

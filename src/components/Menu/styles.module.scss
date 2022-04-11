@@ -1,5 +1,5 @@
 
-@import '../../../public//styles/index.scss';
+@import '@styles/index.scss';
 
 $paddingMenu: 4.16%;
 ._breadCrumbContainerOne{
@@ -36,13 +36,13 @@ $paddingMenu: 4.16%;
   color: $white;
   margin: 0;
   line-height: 1.2;
-  font-family: $helvetica;
+  font-family: $helveticaMedium;
 }
 
 ._blackBodyText{
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: 800;
-  font-family: $helveticaBold;
+  font-family: $helveticaNormalBold;
   line-height: 1.2;
   cursor: pointer;
   position: relative;
@@ -54,7 +54,7 @@ $paddingMenu: 4.16%;
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: all 700ms ease-in-out;
+    transition: all 550ms ease-in-out;
     content: attr(data-hover);
   }
 }
@@ -81,9 +81,9 @@ $paddingMenu: 4.16%;
 }
 
 ._blackBodyFooterText {
-  font-size: 0.75rem;
+  font-size: 0.938rem;
   font-weight: 400;
-  font-family: $helvetica;
+  font-family: $helveticaMedium;
   margin-bottom: 20px;
   cursor: pointer;
   position: relative;
@@ -131,8 +131,9 @@ $paddingMenu: 4.16%;
   width: 85%;
 }
 ._blackFooterText {
-  font-size: 0.875rem;
-  font-family: $helvetica;
+  font-size: 0.75rem;
+  font-family: $helveticaMedium;
+  color:'#FFFFFF'
 }
 
 ._mt {
